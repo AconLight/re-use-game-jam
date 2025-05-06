@@ -31,6 +31,11 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		#animation.play("cheer")
 		
+	if velocity.x >= 0:
+		animation.flip_h = false
+	else:
+		animation.flip_h = true
+		
 	if not is_on_floor():
 		animation.play("jump")
 	elif direction:
