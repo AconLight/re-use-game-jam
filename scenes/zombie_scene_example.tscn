@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://u262rshkpj6w"]
+[gd_scene load_steps=11 format=3 uid="uid://u262rshkpj6w"]
 
 [ext_resource type="Script" uid="uid://rqmmjrdx2wfl" path="res://scripts/character_body_2d.gd" id="1_n0mf8"]
 [ext_resource type="Texture2D" uid="uid://cp8pdkulopynf" path="res://assets/graphics/zombie/zombie_cheer1.png" id="2_1qv7l"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://drv0nq0q44qlj" path="res://assets/graphics/zombie/zombie_cheer2.png" id="3_dr5w1"]
 [ext_resource type="Texture2D" uid="uid://divyf8tf1367v" path="res://assets/graphics/zombie/zombie_walk2.png" id="3_kc7kc"]
 [ext_resource type="Texture2D" uid="uid://vdocmgo6nwis" path="res://assets/graphics/zombie/zombie_jump.png" id="4_1cnln"]
+[ext_resource type="AudioStream" uid="uid://g2l8fy40mbwy" path="res://assets/audio/queef_fart-106279.mp3" id="7_dr5w1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1qv7l"]
 size = Vector2(968, 38)
@@ -76,4 +77,8 @@ shape = SubResource("RectangleShape2D_dr5w1")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/CharacterBody2D"]
 position = Vector2(220, 191)
 sprite_frames = SubResource("SpriteFrames_1cnln")
-animation = &"cheer"
+animation = &"jump"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Node2D/CharacterBody2D"]
+position = Vector2(-80, -109)
+stream = ExtResource("7_dr5w1")
