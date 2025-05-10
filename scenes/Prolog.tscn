@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bk7edejf0r873"]
 
-[ext_resource type="Texture2D" uid="uid://cus27ywbtfafo" path="res://assets/graphics/prolog/tramwaj_z_arch.jpg" id="1_lgtnh"]
+[ext_resource type="Texture2D" uid="uid://dsm3gkle0win4" path="res://assets/graphics/prolog/tramwaj_z_arch.jpg" id="1_lgtnh"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_25t8v"]
 texture = ExtResource("1_lgtnh")

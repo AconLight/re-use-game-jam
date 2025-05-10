@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://chb6hsshs8wfg"]
 
 [ext_resource type="Script" uid="uid://cfjyybhdas4qm" path="res://scripts/outro.gd" id="1_vmn6f"]
-[ext_resource type="Texture2D" uid="uid://bt6lr0icakgt0" path="res://assets/graphics/gazeta template.png" id="2_ydlee"]
+[ext_resource type="Texture2D" uid="uid://dcbne2c8v42ws" path="res://assets/graphics/gazeta template.png" id="2_ydlee"]
 [ext_resource type="FontFile" uid="uid://bhe30qqqnd1r2" path="res://assets/fonts/pixeloid_sans/PixeloidSans.ttf" id="3_ya6b3"]
 [ext_resource type="FontFile" uid="uid://c8n2yveq6dii4" path="res://assets/fonts/pixeloid_sans/PixeloidSans-Bold.ttf" id="4_611wi"]
 
