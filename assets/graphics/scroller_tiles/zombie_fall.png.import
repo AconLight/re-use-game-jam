@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chkykh8fj2w27"
-path="res://.godot/imported/1.png-515c813a180ba5fd2e61c8e75c4cac47.ctex"
+uid="uid://j0megnsop0pl"
+path="res://.godot/imported/zombie_fall.png-3d8ee8303b2de0450c43d73442f0ab7c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://1.png"
-dest_files=["res://.godot/imported/1.png-515c813a180ba5fd2e61c8e75c4cac47.ctex"]
+source_file="res://assets/graphics/scroller_tiles/zombie_fall.png"
+dest_files=["res://.godot/imported/zombie_fall.png-3d8ee8303b2de0450c43d73442f0ab7c.ctex"]
 
 [params]
 

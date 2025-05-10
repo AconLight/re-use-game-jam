@@ -1,11 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://gnpa1udn1jdk"]
-
-[ext_resource type="Script" uid="uid://bv3r2vijc2idx" path="res://scripts/predkosc tramwaju.gd" id="1_ftuii"]
+[gd_scene format=3 uid="uid://gnpa1udn1jdk"]
 
 [node name="EmptyNode" type="Node"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
-script = ExtResource("1_ftuii")
 
 [node name="NaklejkaPredkosci" type="Label" parent="Camera2D"]
 offset_right = 40.0
