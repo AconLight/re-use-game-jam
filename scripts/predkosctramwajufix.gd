@@ -1,8 +1,8 @@
 extends Node
 
+@export var melin:Node2D
 
 @onready var predkosc_tramwaju = 0
-@export var melin:Node2D
 @onready var naklejka_predkosci = $SpeedLabel  # Reference to the Label node
 var gaz_wcisniety = false  # Tracks whether the "gaz" button is pressed
 var hamulec_wcisniety = false  # Tracks whether the "hamulec" button is pressed
