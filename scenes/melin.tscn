@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://b5nn8eac1rbl5"]
+[gd_scene load_steps=5 format=3 uid="uid://byjgipxlrbee7"]
 
 [ext_resource type="Script" uid="uid://b8p6r1xdxb2t0" path="res://scripts/scroller.gd" id="1_fspbq"]
 [ext_resource type="Script" path="res://scripts/melin.gd" id="1_n2rp7"]
