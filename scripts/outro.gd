@@ -4,7 +4,7 @@ extends Node2D
 @export var akapit: Label
 
 func _ready():
-	prosze_pokazac_artykul(2)
+	prosze_pokazac_artykul(4)
 
 #1 bardzo dobrze #2 srednio #3 zle #4 tramwaj nie dojechal
 func prosze_pokazac_artykul(wariant : int):
