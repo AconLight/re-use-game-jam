@@ -1,15 +1,16 @@
-[gd_scene load_steps=7 format=3 uid="uid://ejdt6jf14nht"]
+[gd_scene load_steps=7 format=3 uid="uid://q8g0kw3n2232"]
 
-[ext_resource type="PackedScene" uid="uid://byjgipxlrbee7" path="res://scenes/melin.tscn" id="1_0iy7v"]
+[ext_resource type="PackedScene" uid="uid://c3q4ehsjrjci7" path="res://scenes/melin.tscn" id="1_0iy7v"]
 [ext_resource type="Script" path="res://scenes/drzwi.gd" id="1_euqvm"]
 [ext_resource type="Texture2D" uid="uid://db7jksotajtda" path="res://assets/graphics/icon.svg" id="2_he8bl"]
 [ext_resource type="PackedScene" uid="uid://cj01us77xqah2" path="res://scenes/pociag.tscn" id="6_he8bl"]
-[ext_resource type="PackedScene" uid="uid://crh2om8if6vx6" path="res://scenes/przystanek.tscn" id="7_0iy7v"]
+[ext_resource type="PackedScene" path="res://scenes/przystanek.tscn" id="7_0iy7v"]
 [ext_resource type="Script" uid="uid://woj5ve7mqhi7" path="res://scripts/predkosctramwajufix.gd" id="14_wkxhr"]
 
 [node name="EmptyNode" type="Node"]
 
-[node name="Melin" parent="." instance=ExtResource("1_0iy7v")]
+[node name="Melin" parent="." node_paths=PackedStringArray("przystanek") instance=ExtResource("1_0iy7v")]
+przystanek = NodePath("../Przystanek")
 
 [node name="Drzwi" type="Node2D" parent="."]
 position = Vector2(321, 311)
