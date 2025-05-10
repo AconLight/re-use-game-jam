@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://chb6hsshs8wfg"]
+
+[ext_resource type="Script" uid="uid://cfjyybhdas4qm" path="res://scripts/outro.gd" id="1_vmn6f"]
+[ext_resource type="Texture2D" uid="uid://bt6lr0icakgt0" path="res://assets/graphics/gazeta template.png" id="2_ydlee"]
+[ext_resource type="FontFile" uid="uid://bhe30qqqnd1r2" path="res://assets/fonts/pixeloid_sans/PixeloidSans.ttf" id="3_ya6b3"]
+[ext_resource type="FontFile" uid="uid://c8n2yveq6dii4" path="res://assets/fonts/pixeloid_sans/PixeloidSans-Bold.ttf" id="4_611wi"]
+
+[node name="Outro" type="Node2D" node_paths=PackedStringArray("naglowek", "akapit")]
+script = ExtResource("1_vmn6f")
+naglowek = NodePath("Label")
+akapit = NodePath("Label2")
+
+[node name="GazetaTemplate" type="Sprite2D" parent="."]
+position = Vector2(267.375, 321.75)
+scale = Vector2(4.39762, 3.59167)
+texture = ExtResource("2_ydlee")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 110.0
+offset_top = 193.0
+offset_right = 591.0
+offset_bottom = 310.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_611wi")
+theme_override_font_sizes/font_size = 35
+text = "Nowa era na torach"
+autowrap_mode = 2
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="."]
+offset_left = 397.0
+offset_top = 159.0
+offset_right = 619.0
+offset_bottom = 199.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_611wi")
+theme_override_fonts/bold_font = ExtResource("4_611wi")
+text = "26 marca 1908"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 114.0
+offset_top = 319.0
+offset_right = 584.0
+offset_bottom = 622.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ya6b3")
+theme_override_font_sizes/font_size = 25
+text = "[b]Nowa era na torach [/b]
+– pierwszy tramwaj elektryczny wyrusza dziś!\"[b]Nowa era na torach [/b]
+dziś!\"[b]Nowa era na torach [/b]
+– pierwszy tramwaj elektryczny wyrusza "
+autowrap_mode = 2
