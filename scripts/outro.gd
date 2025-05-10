@@ -3,11 +3,12 @@ extends Node2D
 @export var naglowek: Label
 @export var akapit: Label
 
-func _ready():
-	prosze_pokazac_artykul(4)
+#func _ready():
+	#prosze_pokazac_artykul(4)
 
 #1 bardzo dobrze #2 srednio #3 zle #4 tramwaj nie dojechal
 func prosze_pokazac_artykul(wariant : int):
+	visible = true
 	if(wariant == 1):
 		naglowek.text = ("Kurs bez zarzutu!")
 		akapit.text =("Jan Kowalski poprowadził dziś pierwszy tramwaj elektryczny przez Warszawę bez najmniejszych problemów. Pasażerowie chwalili spokój i pewną rękę motorniczego. Nowa era rozpoczęta z klasą!")
@@ -20,3 +21,6 @@ func prosze_pokazac_artykul(wariant : int):
 	elif (wariant == 4):
 		naglowek.text = ("Tramwaj stanął – kurs przerwany")
 		akapit.text =("Pierwszy elektryczny tramwaj utknął na trasie. Jan Kowalski nie zapanował nad maszyną, co wywołało zamieszanie wśród pasażerów. Przejazd przerwany – przyszłość elektryki pod znakiem zapytania.")
+
+func prosze_schowac():
+	visible = false
