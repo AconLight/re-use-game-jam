@@ -1,11 +1,13 @@
 extends Node2D  
 
 @export var drzwi: Node2D
-
+@onready var animated_sprite = $AnimatedSprite2D 
+# Reference to the AnimatedSprite node
 
 func _ready():
+	animated_sprite.play("default")  # Replace "default" with the name of
+	# Tween movement to the target position
 	var target_position = drzwi.global_position
-
 	var tween := create_tween()
 	tween.tween_property(
 		self,
