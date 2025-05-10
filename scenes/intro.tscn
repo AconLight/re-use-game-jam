@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=3 uid="uid://5m56vols5nkq"]
+
+[ext_resource type="Texture2D" uid="uid://fshl1u5t6d7o" path="res://assets/graphics/geniusz/obciąg1.png" id="1_4bx60"]
+[ext_resource type="Texture2D" uid="uid://bt6lr0icakgt0" path="res://assets/graphics/gazeta template.png" id="1_ioskq"]
+[ext_resource type="FontFile" uid="uid://bhe30qqqnd1r2" path="res://assets/fonts/pixeloid_sans/PixeloidSans.ttf" id="3_i2l1n"]
+[ext_resource type="FontFile" uid="uid://c8n2yveq6dii4" path="res://assets/fonts/pixeloid_sans/PixeloidSans-Bold.ttf" id="4_wfs7u"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Obciąg1" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(838, 299)
+scale = Vector2(4.985, 4.985)
+texture = ExtResource("1_4bx60")
+
+[node name="gazeta" type="Node2D" parent="."]
+position = Vector2(-192, 8)
+
+[node name="GazetaTemplate" type="Sprite2D" parent="gazeta"]
+position = Vector2(459.375, 313.75)
+scale = Vector2(4.39762, 3.59167)
+texture = ExtResource("1_ioskq")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="gazeta"]
+offset_left = 311.0
+offset_top = 285.0
+offset_right = 764.0
+offset_bottom = 611.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_i2l1n")
+theme_override_fonts/bold_font = ExtResource("4_wfs7u")
+bbcode_enabled = true
+text = "Dziś o godzinie 9:35 z placu Krasińskich wyruszy pierwszy w historii Warszawy tramwaj elektryczny, zmierzający w stronę placu Unii Lubelskiej. [b]Pojazd poprowadzi Jan Kowalski, syn znanego woźnicy tramwaju konnego, Antoniego Kowalskiego.[/b]
+
+
+Prędkość 16 km/h budzi emocje – jedni mówią o postępie, inni o zagrożeniu. Czy młody Kowalski sprosta zadaniu i zapisze się w historii miasta? Cała Warszawa patrzy z zapartym tchem.
+"
+horizontal_alignment = 3
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="gazeta"]
+offset_left = 316.0
+offset_top = 167.0
+offset_right = 767.0
+offset_bottom = 269.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_i2l1n")
+theme_override_fonts/bold_font = ExtResource("4_wfs7u")
+theme_override_font_sizes/normal_font_size = 17
+theme_override_font_sizes/bold_font_size = 36
+bbcode_enabled = true
+text = "[b]Nowa era na torach [/b]
+– pierwszy tramwaj elektryczny wyrusza dziś!\""
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="gazeta"]
+offset_left = 589.0
+offset_top = 151.0
+offset_right = 811.0
+offset_bottom = 191.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_wfs7u")
+theme_override_fonts/bold_font = ExtResource("4_wfs7u")
+text = "26 marca 1908"
