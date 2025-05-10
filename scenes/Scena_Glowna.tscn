@@ -1,16 +1,17 @@
-[gd_scene load_steps=8 format=3 uid="uid://q8g0kw3n2232"]
+[gd_scene load_steps=9 format=3 uid="uid://ejdt6jf14nht"]
 
-[ext_resource type="PackedScene" uid="uid://c3q4ehsjrjci7" path="res://scenes/melin.tscn" id="1_0iy7v"]
+[ext_resource type="PackedScene" uid="uid://byjgipxlrbee7" path="res://scenes/melin.tscn" id="1_0iy7v"]
 [ext_resource type="Script" path="res://scenes/drzwi.gd" id="1_euqvm"]
 [ext_resource type="Texture2D" uid="uid://db7jksotajtda" path="res://assets/graphics/icon.svg" id="2_he8bl"]
-[ext_resource type="PackedScene" path="res://scenes/pasazer.tscn" id="4_wnnxy"]
+[ext_resource type="PackedScene" uid="uid://copk62cxa3fg0" path="res://scenes/pasazer.tscn" id="4_wnnxy"]
+[ext_resource type="PackedScene" uid="uid://qvg8rvah6i7f" path="res://scenes/slup.tscn" id="5_r72ry"]
 [ext_resource type="PackedScene" uid="uid://cj01us77xqah2" path="res://scenes/pociag.tscn" id="6_he8bl"]
-[ext_resource type="Script" path="res://scripts/predkosctramwajufix.gd" id="14_wkxhr"]
+[ext_resource type="Script" uid="uid://woj5ve7mqhi7" path="res://scripts/predkosctramwajufix.gd" id="14_wkxhr"]
 [ext_resource type="Script" uid="uid://bnvnqy7yq0vkt" path="res://scripts/score_system.gd" id="15_ywcv8"]
 
 [node name="EmptyNode" type="Node"]
 
-[node name="Node2D" parent="." instance=ExtResource("1_0iy7v")]
+[node name="Melin" parent="." instance=ExtResource("1_0iy7v")]
 
 [node name="Drzwi" type="Node2D" parent="."]
 position = Vector2(321, 311)
@@ -42,8 +43,11 @@ drzwi = NodePath("../../Drzwi")
 position = Vector2(82, 514)
 drzwi = NodePath("../../Drzwi")
 
-[node name="GUI" type="Node2D" parent="."]
+[node name="Slup" parent="Przystanek" instance=ExtResource("5_r72ry")]
+
+[node name="GUI" type="Node2D" parent="." node_paths=PackedStringArray("melin")]
 script = ExtResource("14_wkxhr")
+melin = NodePath("../Melin")
 
 [node name="SpeedLabel" type="Label" parent="GUI"]
 offset_left = 94.0
