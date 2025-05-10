@@ -25,15 +25,15 @@ func _ready() -> void:
 	pass
 	
 func _process(delta):
-	print("scroller _process")
+	#print("scroller _process")
 	if $AssetLoader.tiles_dict.keys().size() > 0:
-		print("add_prefab pre")
+		#print("add_prefab pre")
 		tile_position_x -= delta*velocity*velocity_factor
 		while tile_position_x < next_position_x:
 			var tile_names = $AssetLoader.tiles_dict.keys()
 			var tile_name = tile_names[rng.randi_range(0, tile_names.size()-1)]
-			print("tile_name")
-			print(tile_name)
+			#print("tile_name")
+			#print(tile_name)
 			add_tile(tile_name)
 	elif prefab:
 		tile_position_x -= delta*velocity*velocity_factor

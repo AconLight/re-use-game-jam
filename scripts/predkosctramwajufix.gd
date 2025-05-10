@@ -38,24 +38,24 @@ func _process(delta: float) -> void:
 	
 func update_score(score) -> void:
 	wynik += score
-	naklejka_wyniku.text = wynik
+	naklejka_wyniku.text = str(wynik)
 	
 func _input(event: InputEvent) -> void:
 	# Check if the up-arrow key is pressed or released
 	if event.is_action_pressed("ui_up"):
 		gaz_wcisniety = true
-		print("ui_up pressed")
+		#print("ui_up pressed")
 	elif event.is_action_released("ui_up"):
 		gaz_wcisniety = false
-		print("ui_up released")
+		#print("ui_up released")
 
 	# Check if the down-arrow key is pressed or released
 	if event.is_action_pressed("ui_down"):
 		hamulec_wcisniety = true
-		print("ui_down pressed")
+		#print("ui_down pressed")
 	elif event.is_action_released("ui_down"):
 		hamulec_wcisniety = false
-		print("ui_down released")
+		#print("ui_down released")
 
 func _on_button_pressed() -> void:
 	gaz_wcisniety = true  # Start increasing speed

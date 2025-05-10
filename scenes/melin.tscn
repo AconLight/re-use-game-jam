@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://byjgipxlrbee7"]
+[gd_scene load_steps=7 format=3 uid="uid://byjgipxlrbee7"]
 
 [ext_resource type="Script" uid="uid://b8p6r1xdxb2t0" path="res://scripts/scroller.gd" id="1_fspbq"]
 [ext_resource type="Script" uid="uid://dt010kn5ocia1" path="res://scripts/melin.gd" id="1_n2rp7"]
@@ -6,10 +6,8 @@
 [ext_resource type="Script" uid="uid://bfexvw5pwiqo5" path="res://scripts/asset_loader.gd" id="2_s0w3l"]
 [ext_resource type="PackedScene" uid="uid://btrwaov0wy1fc" path="res://scenes/przystanek.tscn" id="5_mxc00"]
 [ext_resource type="Script" path="res://scenes/drzwi.gd" id="6_mnc2m"]
-[ext_resource type="Texture2D" uid="uid://db7jksotajtda" path="res://assets/graphics/icon.svg" id="7_mrfuw"]
 
 [node name="Melin" type="Node2D" node_paths=PackedStringArray("przystanek")]
-position = Vector2(0, 200)
 script = ExtResource("1_n2rp7")
 przystanek = NodePath("Przystanek")
 
@@ -23,11 +21,9 @@ script = ExtResource("1_fspbq")
 script = ExtResource("2_s0w3l")
 
 [node name="Przystanek" parent="." node_paths=PackedStringArray("drzwi_przystanek") instance=ExtResource("5_mxc00")]
+position = Vector2(0, -105)
 drzwi_przystanek = NodePath("../Drzwi")
 
 [node name="Drzwi" type="Node2D" parent="."]
 position = Vector2(321, 455)
 script = ExtResource("6_mnc2m")
-
-[node name="Sprite2D" type="Sprite2D" parent="Drzwi"]
-texture = ExtResource("7_mrfuw")

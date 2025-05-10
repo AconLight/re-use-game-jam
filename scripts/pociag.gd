@@ -23,7 +23,10 @@ func measure_distance_and_call(przystanek):
 	# Ensure both popup and przystanek are assigned
 
 	# Measure the distance from the parent node to the target node
-	var distance = global_position.distance_to(slup.global_position)
+	#var distance = animation_sprite.global_position.x - (slup.global_position.x - 626.0)
+	var distance = global_position.x - przystanek.global_position.x
+	distance = abs(distance)
+	
 	print("Distance to target:", distance)
 
 	# Determine the proximity range, call the `poka` function, and update the score

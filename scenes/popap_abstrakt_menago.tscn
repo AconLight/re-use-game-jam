@@ -4,9 +4,10 @@
 [ext_resource type="FontFile" uid="uid://c8n2yveq6dii4" path="res://assets/fonts/pixeloid_sans/PixeloidSans-Bold.ttf" id="2_3olrk"]
 [ext_resource type="AudioStream" uid="uid://ct2en0ipxji6m" path="res://assets/audio/fx/dzwoneczek.mp3" id="3_86t62"]
 
-[node name="PopapAbstraktMenago" type="Node2D" node_paths=PackedStringArray("tekst", "dzwonek")]
+[node name="PopapAbstraktMenago" type="Node2D" node_paths=PackedStringArray("tekst", "noded", "dzwonek")]
 script = ExtResource("1_t1jya")
 tekst = NodePath("Node2D/RichTextLabel")
+noded = NodePath("Node2D")
 dzwonek = NodePath("AudioStreamPlayer2D")
 
 [node name="Node2D" type="Node2D" parent="."]
@@ -23,6 +24,8 @@ offset_right = 1041.0
 offset_bottom = 507.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/outline_size = 70
+theme_override_constants/shadow_offset_y = 45
 theme_override_fonts/normal_font = ExtResource("2_3olrk")
 theme_override_fonts/mono_font = ExtResource("2_3olrk")
 theme_override_fonts/italics_font = ExtResource("2_3olrk")

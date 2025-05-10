@@ -72,3 +72,4 @@ stream = ExtResource("13_gyww5")
 volume_db = -11.62
 
 [node name="PopapAbstraktMenago" parent="." instance=ExtResource("11_t1ciu")]
+position = Vector2(0, -116)

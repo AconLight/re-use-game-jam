@@ -55,9 +55,12 @@ func _process(delta):
 		
 	#print("stop_scroller.tiles.size() > 0" + stop_scroller.tiles.size() > 0)
 	if stop_scroller.tiles.size() > 0 and velocity <= 0.00001:
-		#print("not stop_scroller.tiles[0].hasCalculated" + not stop_scroller.tiles[0].hasCalculated)
-		if not stop_scroller.tiles[0].hasCalculated:
-			pociong.measure_distance_and_call(stop_scroller.tiles[0])
-			stop_scroller.tiles[0].hasCalculated = true
+		print("prces scrall manager")
+		print(stop_scroller.tiles.size())
+		print("not stop_scroller.tiles[0].hasCalculated" )
+		print(not stop_scroller.tiles[0].hasCalculated)
+
+		pociong.measure_distance_and_call(stop_scroller.tiles[0])
+		stop_scroller.tiles[0].hasCalculated = true
 		
 	
