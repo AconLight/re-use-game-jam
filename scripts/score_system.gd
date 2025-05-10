@@ -1,4 +1,4 @@
-#extends Node2D
+extends Node2D
 #
 #@export var target_object: Node2D  # The object to measure proximity to
 #@export var very_small_proximity = 50  # Distance for very small proximity
