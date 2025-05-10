@@ -1,7 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://ejdt6jf14nht"]
 
 [ext_resource type="Script" path="res://scenes/drzwi.gd" id="1_euqvm"]
-[ext_resource type="Script" uid="uid://bv3r2vijc2idx" path="res://scripts/predkosc tramwaju.gd" id="1_knm5o"]
 [ext_resource type="Texture2D" uid="uid://db7jksotajtda" path="res://assets/graphics/icon.svg" id="2_he8bl"]
 [ext_resource type="PackedScene" uid="uid://copk62cxa3fg0" path="res://scenes/pasazer.tscn" id="4_wnnxy"]
 [ext_resource type="Texture2D" uid="uid://bh2g6daxp5t2j" path="res://assets/graphics/geniusz/obciąg1.png" id="5_wkxhr"]
@@ -14,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://cg3wqpjt18tlv" path="res://assets/graphics/geniusz/obciąg8.png" id="12_os7nu"]
 [ext_resource type="Texture2D" uid="uid://dji2slbgkgyoi" path="res://assets/graphics/geniusz/obciąg9.png" id="13_2vb5t"]
 [ext_resource type="Texture2D" uid="uid://rlnjn7wfe22g" path="res://assets/graphics/geniusz/obciąg10.png" id="14_s7kaj"]
+[ext_resource type="Script" uid="uid://woj5ve7mqhi7" path="res://scripts/predkosctramwajufix.gd" id="14_wkxhr"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_a7m6s"]
 animations = [{
@@ -62,13 +62,6 @@ script = ExtResource("1_euqvm")
 [node name="Sprite2D" type="Sprite2D" parent="Drzwi"]
 texture = ExtResource("2_he8bl")
 
-[node name="Node2D" type="Node2D" parent="."]
-script = ExtResource("1_knm5o")
-
-[node name="NaklejkaPredkosci" type="Label" parent="Node2D"]
-offset_right = 40.0
-offset_bottom = 23.0
-
 [node name="Przystanek" type="Node2D" parent="."]
 z_index = 1
 
@@ -100,3 +93,12 @@ scale = Vector2(6, 6)
 sprite_frames = SubResource("SpriteFrames_a7m6s")
 animation = &"jedzie"
 autoplay = "jedzie"
+
+[node name="GUI" type="Node2D" parent="."]
+script = ExtResource("14_wkxhr")
+
+[node name="SpeedLabel" type="Label" parent="GUI"]
+offset_left = 94.0
+offset_top = 35.0
+offset_right = 134.0
+offset_bottom = 58.0

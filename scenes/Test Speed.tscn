@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://d4202qh5wlan"]
+
+[ext_resource type="Script" uid="uid://woj5ve7mqhi7" path="res://scripts/predkosctramwajufix.gd" id="1_s3b0d"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(562, 310)
+script = ExtResource("1_s3b0d")
+
+[node name="SpeedLabel" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
