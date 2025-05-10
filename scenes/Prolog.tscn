@@ -1,6 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bk7edejf0r873"]
+[gd_scene load_steps=7 format=3 uid="uid://bk7edejf0r873"]
 
 [ext_resource type="Texture2D" uid="uid://dt0nqvkmq81t" path="res://assets/graphics/prolog/tramwaj_z_arch.jpg" id="1_lgtnh"]
+[ext_resource type="FontFile" uid="uid://bhe30qqqnd1r2" path="res://assets/fonts/pixeloid_sans/PixeloidSans.ttf" id="2_f3vxk"]
+[ext_resource type="FontFile" uid="uid://c8n2yveq6dii4" path="res://assets/fonts/pixeloid_sans/PixeloidSans-Bold.ttf" id="3_t75cq"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_25t8v"]
 texture = ExtResource("1_lgtnh")
@@ -55,6 +57,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_f3vxk")
 theme_override_font_sizes/font_size = 80
 theme_override_styles/focus = SubResource("StyleBoxFlat_lgtnh")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_lgtnh")
@@ -82,6 +85,9 @@ offset_right = 553.0
 offset_bottom = 137.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("2_f3vxk")
+theme_override_fonts/bold_italics_font = ExtResource("3_t75cq")
+theme_override_fonts/bold_font = ExtResource("3_t75cq")
 theme_override_font_sizes/bold_italics_font_size = 36
 theme_override_font_sizes/italics_font_size = 36
 theme_override_font_sizes/mono_font_size = 36

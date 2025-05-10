@@ -5,7 +5,7 @@
 [ext_resource type="FontFile" uid="uid://bhe30qqqnd1r2" path="res://assets/fonts/pixeloid_sans/PixeloidSans.ttf" id="3_i2l1n"]
 [ext_resource type="FontFile" uid="uid://c8n2yveq6dii4" path="res://assets/fonts/pixeloid_sans/PixeloidSans-Bold.ttf" id="4_wfs7u"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 
 [node name="Obciąg1" type="Sprite2D" parent="."]
 texture_filter = 1
