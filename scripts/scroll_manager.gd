@@ -35,8 +35,12 @@ func _ready() -> void:
 	building_scroller.load_scroller(path, 100, 0.5)
 	back_pavement_scroller.load_scroller(path, 200, 1)
 	
-	#stop_prefab = get_parent().przystanek
-	#stop_scroller.load_scroller_from_prefabs([stop_prefab], 700, 300, 2)
+	stop_prefab = get_parent().przystanek
+	stop_prefab.visible = true
+	var stop_width = 2000
+	stop_scroller.load_scroller_prefab(stop_prefab, 2000, 0, 2)
+	stop_scroller.max_tiles_width = stop_width * 5
+	
 	
 	for scroller in scrollers:
 		add_child(scroller)

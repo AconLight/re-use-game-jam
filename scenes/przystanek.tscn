@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://crh2om8if6vx6"]
+[gd_scene load_steps=5 format=3 uid="uid://btrwaov0wy1fc"]
 
-[ext_resource type="Script" uid="uid://cm5513x4g38tu" path="res://scenes/przystanek.gd" id="1_e4ryh"]
-[ext_resource type="PackedScene" uid="uid://copk62cxa3fg0" path="res://scenes/pasazer.tscn" id="1_mx171"]
-[ext_resource type="PackedScene" uid="uid://qvg8rvah6i7f" path="res://scenes/slup.tscn" id="2_ybcsy"]
+[ext_resource type="Script" path="res://scenes/przystanek.gd" id="1_e4ryh"]
+[ext_resource type="PackedScene" path="res://scenes/pasazer.tscn" id="1_mx171"]
+[ext_resource type="PackedScene" path="res://scenes/slup.tscn" id="2_ybcsy"]
+[ext_resource type="Texture2D" uid="uid://djld38co7fd8o" path="res://icon.svg" id="4_g0r1m"]
 
 [node name="Przystanek" type="Node2D"]
 script = ExtResource("1_e4ryh")
@@ -29,3 +30,7 @@ przystanek = NodePath("..")
 
 [node name="Slup" parent="." instance=ExtResource("2_ybcsy")]
 position = Vector2(626, 553)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(120, 216)
+texture = ExtResource("4_g0r1m")
