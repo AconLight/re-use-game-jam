@@ -3,8 +3,8 @@ extends Node2D
 @export var tekst: RichTextLabel
 @export var dzwonek: AudioStreamPlayer2D
 
-func _ready() -> void:
-	poka(1)
+#func _ready() -> void:
+	#poka(1)
 	
 func poka(popapik: int):
 	

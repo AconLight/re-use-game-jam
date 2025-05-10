@@ -10,4 +10,4 @@ script = ExtResource("1_vbg5f")
 stream = ExtResource("2_kdo4m")
 volume_db = -13.408
 autoplay = true
-parameters/looping = false
+parameters/looping = true
