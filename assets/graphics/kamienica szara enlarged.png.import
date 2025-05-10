@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bn82xleeuiftq"
-path="res://.godot/imported/kamienica_szara1.png-bbe0544908436b68eabccd32de774a26.ctex"
+uid="uid://byhwbbhnev6ud"
+path="res://.godot/imported/kamienica szara enlarged.png-c2997ecfb32e0e4df74df93ca4c427cf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/graphics/scroller_buildings/kamienica_szara1.png"
-dest_files=["res://.godot/imported/kamienica_szara1.png-bbe0544908436b68eabccd32de774a26.ctex"]
+source_file="res://assets/graphics/kamienica szara enlarged.png"
+dest_files=["res://.godot/imported/kamienica szara enlarged.png-c2997ecfb32e0e4df74df93ca4c427cf.ctex"]
 
 [params]
 

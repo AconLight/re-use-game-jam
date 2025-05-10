@@ -11,6 +11,8 @@ var building_scroller
 var back_pavement_scroller
 
 var stop_prefab
+
+var pociong
 var stop_scroller
 
 var scrollers = []
@@ -32,15 +34,16 @@ func _ready() -> void:
 		stop_scroller]
 		
 	background_scroller.load_scroller(path_buildings, 0, 0.2)
-	building_scroller.load_scroller(path, 100, 0.5)
+	building_scroller.load_scroller(path, 0, 0.5)
 	back_pavement_scroller.load_scroller(path, 200, 1)
 	
 	stop_prefab = get_parent().przystanek
 	stop_prefab.visible = true
 	var stop_width = 2000
-	stop_scroller.load_scroller_prefab(stop_prefab, 2000, 0, 2)
+	stop_scroller.load_scroller_prefab(stop_prefab, 2000, 0, 0.3)
 	stop_scroller.max_tiles_width = stop_width * 5
 	
+	pociong = get_parent().pociong
 	
 	for scroller in scrollers:
 		add_child(scroller)
@@ -49,5 +52,12 @@ func _ready() -> void:
 func _process(delta):
 	for scroller in scrollers:
 		scroller.velocity = velocity*velocity_factor
+		
+	#print("stop_scroller.tiles.size() > 0" + stop_scroller.tiles.size() > 0)
+	if stop_scroller.tiles.size() > 0 and velocity <= 0.00001:
+		#print("not stop_scroller.tiles[0].hasCalculated" + not stop_scroller.tiles[0].hasCalculated)
+		if not stop_scroller.tiles[0].hasCalculated:
+			pociong.measure_distance_and_call(stop_scroller.tiles[0])
+			stop_scroller.tiles[0].hasCalculated = true
 		
 	

@@ -1,26 +1,27 @@
-[gd_scene load_steps=8 format=3 uid="uid://sj2s165pj43"]
+[gd_scene load_steps=7 format=3 uid="uid://ejdt6jf14nht"]
 
-[ext_resource type="PackedScene" uid="uid://b5nn8eac1rbl5" path="res://scenes/melin.tscn" id="1_0iy7v"]
+[ext_resource type="PackedScene" uid="uid://byjgipxlrbee7" path="res://scenes/melin.tscn" id="1_0iy7v"]
 [ext_resource type="Script" path="res://scenes/drzwi.gd" id="1_euqvm"]
 [ext_resource type="PackedScene" uid="uid://d3rukusfkr0fr" path="res://scenes/muzyczka.tscn" id="1_r72ry"]
 [ext_resource type="Texture2D" uid="uid://db7jksotajtda" path="res://assets/graphics/icon.svg" id="2_he8bl"]
 [ext_resource type="PackedScene" uid="uid://bu71rdm6avi7w" path="res://scenes/pociag.tscn" id="6_he8bl"]
-[ext_resource type="PackedScene" uid="uid://btwi48vqr86tg" path="res://scenes/przystanek.tscn" id="7_0iy7v"]
 [ext_resource type="Script" uid="uid://woj5ve7mqhi7" path="res://scripts/predkosctramwajufix.gd" id="14_wkxhr"]
 
 [node name="EmptyNode" type="Node"]
 
 [node name="Muzyczka" parent="." instance=ExtResource("1_r72ry")]
 
-[node name="Melin" parent="." node_paths=PackedStringArray("przystanek") instance=ExtResource("1_0iy7v")]
+[node name="Melin" parent="." node_paths=PackedStringArray("pociong") instance=ExtResource("1_0iy7v")]
 position = Vector2(0, 344)
-przystanek = NodePath("../Przystanek")
+pociong = NodePath("../Pociag")
 
 [node name="Drzwi" type="Node2D" parent="."]
+visible = false
 position = Vector2(321, 455)
 script = ExtResource("1_euqvm")
 
 [node name="Sprite2D" type="Sprite2D" parent="Drzwi"]
+visible = false
 texture = ExtResource("2_he8bl")
 
 [node name="GUI" type="Node2D" parent="." node_paths=PackedStringArray("melin", "pociag")]
@@ -34,7 +35,6 @@ offset_top = 35.0
 offset_right = 134.0
 offset_bottom = 58.0
 
-
 [node name="ScoreLabel" type="Label" parent="GUI"]
 offset_right = 40.0
 offset_bottom = 23.0
@@ -42,7 +42,3 @@ offset_bottom = 23.0
 [node name="Pociag" parent="." node_paths=PackedStringArray("gui") instance=ExtResource("6_he8bl")]
 position = Vector2(0, 144)
 gui = NodePath("../GUI")
-
-[node name="Przystanek" parent="." node_paths=PackedStringArray("drzwi_przystanek") instance=ExtResource("7_0iy7v")]
-position = Vector2(2, 0)
-drzwi_przystanek = NodePath("../Drzwi")

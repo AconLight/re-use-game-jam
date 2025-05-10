@@ -7,6 +7,7 @@ extends Node2D
 func _ready():
 	animated_sprite.play("default")  # Replace "default" with the name of
 	# Tween movement to the target position
+	# TODO STEFAN
 	var target_position = przystanek.get_drzwi().global_position
 	var tween := create_tween()
 	tween.tween_property(
