@@ -5,8 +5,9 @@
 [ext_resource type="PackedScene" path="res://scenes/slup.tscn" id="2_ybcsy"]
 [ext_resource type="Texture2D" uid="uid://djld38co7fd8o" path="res://icon.svg" id="4_g0r1m"]
 
-[node name="Przystanek" type="Node2D"]
+[node name="Przystanek" type="Node2D" node_paths=PackedStringArray("slup")]
 script = ExtResource("1_e4ryh")
+slup = NodePath("Slup")
 
 [node name="Pasazer" parent="." node_paths=PackedStringArray("przystanek") instance=ExtResource("1_mx171")]
 position = Vector2(862, 547)

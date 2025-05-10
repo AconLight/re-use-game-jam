@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://ks00repvcrqx"]
+[gd_scene load_steps=4 format=3 uid="uid://bu3ee2ansm46d"]
 
-[ext_resource type="Script" path="res://scenes/popap_abstrakt_menago.gd" id="1_t1jya"]
+[ext_resource type="Script" uid="uid://d17htvqt7uqo3" path="res://scenes/popap_abstrakt_menago.gd" id="1_t1jya"]
 [ext_resource type="FontFile" uid="uid://c8n2yveq6dii4" path="res://assets/fonts/pixeloid_sans/PixeloidSans-Bold.ttf" id="2_3olrk"]
 [ext_resource type="AudioStream" uid="uid://ct2en0ipxji6m" path="res://assets/audio/fx/dzwoneczek.mp3" id="3_86t62"]
 
@@ -34,7 +34,6 @@ theme_override_font_sizes/mono_font_size = 100
 theme_override_font_sizes/normal_font_size = 100
 theme_override_font_sizes/bold_font_size = 100
 bbcode_enabled = true
-text = "text text text"
 horizontal_alignment = 1
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

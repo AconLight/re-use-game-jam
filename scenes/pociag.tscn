@@ -1,5 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://cj01us77xqah2"]
+[gd_scene load_steps=16 format=3 uid="uid://bu71rdm6avi7w"]
 
+[ext_resource type="Script" uid="uid://csc1nrha1mevu" path="res://scripts/pociag.gd" id="1_6og0h"]
 [ext_resource type="Texture2D" uid="uid://bh2g6daxp5t2j" path="res://assets/graphics/geniusz/obciąg1.png" id="1_auu5h"]
 [ext_resource type="Texture2D" uid="uid://b6ia8ncc2lqla" path="res://assets/graphics/geniusz/obciąg2.png" id="2_t1ciu"]
 [ext_resource type="Texture2D" uid="uid://dbnyg7ljo0nge" path="res://assets/graphics/geniusz/obciąg3.png" id="3_1d2yt"]
@@ -10,8 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://cg3wqpjt18tlv" path="res://assets/graphics/geniusz/obciąg8.png" id="8_43xgw"]
 [ext_resource type="Texture2D" uid="uid://dji2slbgkgyoi" path="res://assets/graphics/geniusz/obciąg9.png" id="9_8t1uj"]
 [ext_resource type="Texture2D" uid="uid://rlnjn7wfe22g" path="res://assets/graphics/geniusz/obciąg10.png" id="10_51utr"]
-[ext_resource type="PackedScene" path="res://scenes/popap_abstrakt_menago.tscn" id="11_t1ciu"]
-[ext_resource type="Script" uid="uid://bnvnqy7yq0vkt" path="res://scripts/score_system.gd" id="12_1d2yt"]
+[ext_resource type="PackedScene" uid="uid://bu3ee2ansm46d" path="res://scenes/popap_abstrakt_menago.tscn" id="11_t1ciu"]
+[ext_resource type="Script" path="res://scripts/pociag_animated_sprite_2d.gd" id="12_6og0h"]
+[ext_resource type="AudioStream" uid="uid://bwhkkksngh5he" path="res://assets/audio/fx/jechane_tramwajem.mp3" id="13_gyww5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5htuo"]
 animations = [{
@@ -51,18 +53,22 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Pociag" type="Node2D"]
+[node name="Pociag" type="Node2D" node_paths=PackedStringArray("popup")]
+script = ExtResource("1_6og0h")
+popup = NodePath("PopapAbstraktMenago")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." node_paths=PackedStringArray("sound")]
 position = Vector2(581, 65)
 scale = Vector2(6, 6)
 sprite_frames = SubResource("SpriteFrames_5htuo")
 animation = &"jedzie"
 autoplay = "jedzie"
 flip_h = true
+script = ExtResource("12_6og0h")
+sound = NodePath("AudioStreamPlayer2D")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="AnimatedSprite2D"]
+stream = ExtResource("13_gyww5")
+volume_db = -11.62
 
 [node name="PopapAbstraktMenago" parent="." instance=ExtResource("11_t1ciu")]
-
-[node name="ScoreSystem" type="Node2D" parent="." node_paths=PackedStringArray("popup")]
-script = ExtResource("12_1d2yt")
-popup = NodePath("../PopapAbstraktMenago")
