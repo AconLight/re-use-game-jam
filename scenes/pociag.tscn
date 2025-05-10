@@ -12,7 +12,6 @@
 [ext_resource type="Texture2D" uid="uid://dji2slbgkgyoi" path="res://assets/graphics/geniusz/obciąg9.png" id="9_8t1uj"]
 [ext_resource type="Texture2D" uid="uid://rlnjn7wfe22g" path="res://assets/graphics/geniusz/obciąg10.png" id="10_51utr"]
 [ext_resource type="PackedScene" uid="uid://bu3ee2ansm46d" path="res://scenes/popap_abstrakt_menago.tscn" id="11_t1ciu"]
-[ext_resource type="Script" uid="uid://bnvnqy7yq0vkt" path="res://scripts/score_system.gd" id="12_1d2yt"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5htuo"]
 animations = [{
