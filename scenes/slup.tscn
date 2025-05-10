@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://qvg8rvah6i7f"]
+
+[ext_resource type="Texture2D" uid="uid://db7jksotajtda" path="res://assets/graphics/icon.svg" id="1_ujesl"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3hvsh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ujesl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Slup" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_3hvsh")
