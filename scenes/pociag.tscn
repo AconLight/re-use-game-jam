@@ -1,0 +1,60 @@
+[gd_scene load_steps=12 format=3 uid="uid://bi6fqjj7o66v7"]
+
+[ext_resource type="Texture2D" uid="uid://bh2g6daxp5t2j" path="res://assets/graphics/geniusz/obciąg1.png" id="1_auu5h"]
+[ext_resource type="Texture2D" uid="uid://b6ia8ncc2lqla" path="res://assets/graphics/geniusz/obciąg2.png" id="2_t1ciu"]
+[ext_resource type="Texture2D" uid="uid://dbnyg7ljo0nge" path="res://assets/graphics/geniusz/obciąg3.png" id="3_1d2yt"]
+[ext_resource type="Texture2D" uid="uid://c5s0pdyf3gmej" path="res://assets/graphics/geniusz/obciąg4.png" id="4_6og0h"]
+[ext_resource type="Texture2D" uid="uid://ca23ha2u42geo" path="res://assets/graphics/geniusz/obciąg5.png" id="5_gyww5"]
+[ext_resource type="Texture2D" uid="uid://ddr5folx5nsfk" path="res://assets/graphics/geniusz/obciąg6.png" id="6_jd2iu"]
+[ext_resource type="Texture2D" uid="uid://duh5vk4gcvvsq" path="res://assets/graphics/geniusz/obciąg7.png" id="7_iweh6"]
+[ext_resource type="Texture2D" uid="uid://cg3wqpjt18tlv" path="res://assets/graphics/geniusz/obciąg8.png" id="8_43xgw"]
+[ext_resource type="Texture2D" uid="uid://dji2slbgkgyoi" path="res://assets/graphics/geniusz/obciąg9.png" id="9_8t1uj"]
+[ext_resource type="Texture2D" uid="uid://rlnjn7wfe22g" path="res://assets/graphics/geniusz/obciąg10.png" id="10_51utr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5htuo"]
+animations = [{
+"frames": [{
+"duration": 0.5,
+"texture": ExtResource("1_auu5h")
+}, {
+"duration": 0.5,
+"texture": ExtResource("2_t1ciu")
+}, {
+"duration": 0.5,
+"texture": ExtResource("3_1d2yt")
+}, {
+"duration": 0.5,
+"texture": ExtResource("4_6og0h")
+}, {
+"duration": 0.5,
+"texture": ExtResource("5_gyww5")
+}, {
+"duration": 0.5,
+"texture": ExtResource("6_jd2iu")
+}, {
+"duration": 0.5,
+"texture": ExtResource("7_iweh6")
+}, {
+"duration": 0.5,
+"texture": ExtResource("8_43xgw")
+}, {
+"duration": 0.5,
+"texture": ExtResource("9_8t1uj")
+}, {
+"duration": 0.5,
+"texture": ExtResource("10_51utr")
+}],
+"loop": true,
+"name": &"jedzie",
+"speed": 5.0
+}]
+
+[node name="Pociag" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(581, 65)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_5htuo")
+animation = &"jedzie"
+autoplay = "jedzie"
+flip_h = true

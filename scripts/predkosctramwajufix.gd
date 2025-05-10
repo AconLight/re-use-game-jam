@@ -8,6 +8,7 @@ var hamulec_wcisniety = false  # Tracks whether the "hamulec" button is pressed
 var drag = 2  # Drag value to reduce speed when no button is pressed
 var max_speed = 40  # Maximum speed limit
 
+	
 func _process(delta: float) -> void:
 	if gaz_wcisniety:
 		predkosc_tramwaju += delta * 10  # Adjust the multiplier (10) to control the speed increase rate
