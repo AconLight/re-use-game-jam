@@ -1,10 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://c3q4ehsjrjci7"]
+[gd_scene load_steps=4 format=3 uid="uid://byjgipxlrbee7"]
 
-[ext_resource type="Script" uid="uid://b8p6r1xdxb2t0" path="res://scripts/scroller.gd" id="1_fspbq"]
+[ext_resource type="Script" path="res://scripts/scroller.gd" id="1_fspbq"]
 [ext_resource type="Script" uid="uid://djbfk3gmb77n8" path="res://scripts/scroll_manager.gd" id="1_wgt5w"]
-[ext_resource type="Script" uid="uid://bfexvw5pwiqo5" path="res://scripts/asset_loader.gd" id="2_s0w3l"]
+[ext_resource type="Script" path="res://scripts/asset_loader.gd" id="2_s0w3l"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Melin" type="Node2D"]
 position = Vector2(0, 200)
 
 [node name="ScrollManager" type="Node2D" parent="."]

@@ -3,6 +3,7 @@ var path = "res://assets/graphics/scroller_tiles/"
 @onready var scroller = $Scroller
 
 var velocity = 100
+var velocity_factor = 10
 
 var background_scroller
 var building_scroller
@@ -28,6 +29,6 @@ func _ready() -> void:
 
 func _process(delta):
 	for scroller in scrollers:
-		scroller.velocity = velocity
+		scroller.velocity = velocity*velocity_factor
 		
 	
