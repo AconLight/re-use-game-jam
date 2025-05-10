@@ -34,7 +34,14 @@ offset_top = 35.0
 offset_right = 134.0
 offset_bottom = 58.0
 
-[node name="Pociag" parent="." instance=ExtResource("6_he8bl")]
+
+[node name="ScoreLabel" type="Label" parent="GUI"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Pociag" parent="." node_paths=PackedStringArray("gui") instance=ExtResource("6_he8bl")]
+position = Vector2(0, 144)
+gui = NodePath("../GUI")
 
 [node name="Przystanek" parent="." node_paths=PackedStringArray("drzwi_przystanek") instance=ExtResource("7_0iy7v")]
 position = Vector2(2, 0)
