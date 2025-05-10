@@ -1,7 +1,7 @@
 extends Node
 
 @export var melin:Node2D
-
+@export var pociag:Node2D
 @onready var predkosc_tramwaju = 0
 @onready var wynik = 0
 @onready var naklejka_predkosci = $SpeedLabel  # Reference to the Label node
@@ -22,8 +22,12 @@ func _process(delta: float) -> void:
 		predkosc_tramwaju -= delta * drag
 
 	# Ensure speed doesn't go below 0
-	if predkosc_tramwaju < 0:
+	if predkosc_tramwaju <= 0:
 		predkosc_tramwaju = 0
+		pociag.stop_animation()
+	if predkosc_tramwaju >= 5:
+		pociag.start_animation()
+		
 
 	# Cap the speed at max_speed
 	if predkosc_tramwaju > max_speed:

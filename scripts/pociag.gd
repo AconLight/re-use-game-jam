@@ -5,9 +5,13 @@ extends Node2D
 @export var range_1 = 50  # Very close range
 @export var range_2 = 100  # Medium range
 @export var range_3 = 200  # Far range
+@onready var animation_sprite = $AnimatedSprite2D
 
 #TODO wywalic
-
+func stop_animation():
+	animation_sprite.pause()
+func start_animation():
+	animation_sprite.play()
 
 func _on_kurs_rozpoczety():
 	print("Kurs został rozpoczęty!")
