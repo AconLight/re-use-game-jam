@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://copk62cxa3fg0"]
+
+[ext_resource type="Texture2D" uid="uid://dclfgl634251y" path="res://assets/graphics/zombie/zombie_hurt.png" id="1_rhdei"]
+[ext_resource type="Texture2D" uid="uid://bs3r2ns4ex6um" path="res://assets/graphics/zombie/zombie_idle.png" id="2_h5mh8"]
+[ext_resource type="Script" uid="uid://b1syl6wydmc6u" path="res://scripts/pasazer_ruch.gd" id="3_5mw6x"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bh52e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_rhdei")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_h5mh8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Pasazer" type="Node2D"]
+script = ExtResource("3_5mw6x")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_bh52e")
