@@ -1,0 +1,60 @@
+[gd_scene load_steps=10 format=3 uid="uid://bfq0e2cxfpe8q"]
+
+[ext_resource type="Script" uid="uid://c0udluxh7eo6a" path="res://scenes/drzwi.gd" id="1_euqvm"]
+[ext_resource type="Script" uid="uid://bqgbhav2r4e3g" path="res://scripts/predkosc tramwaju.gd" id="1_knm5o"]
+[ext_resource type="Texture2D" uid="uid://db7jksotajtda" path="res://assets/graphics/icon.svg" id="2_he8bl"]
+[ext_resource type="Script" uid="uid://b2ghpyiiadagq" path="res://scripts/pasazer_ruch.gd" id="2_vudnh"]
+[ext_resource type="Texture2D" uid="uid://dclfgl634251y" path="res://assets/graphics/zombie/zombie_hurt.png" id="3_wnnxy"]
+[ext_resource type="Texture2D" uid="uid://bs3r2ns4ex6um" path="res://assets/graphics/zombie/zombie_idle.png" id="4_euqvm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_he8bl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_wnnxy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_euqvm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_vudnh"]
+resource_name = "podejdz_do_wejscia"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vfgc4"]
+_data = {
+&"podejdz_do_wejscia": SubResource("Animation_vudnh")
+}
+
+[node name="EmptyNode" type="Node"]
+
+[node name="Drzwi" type="Node2D" parent="."]
+position = Vector2(299, 214)
+script = ExtResource("1_euqvm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Drzwi"]
+texture = ExtResource("2_he8bl")
+
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource("1_knm5o")
+
+[node name="NaklejkaPredkosci" type="Label" parent="Node2D"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Pasazer" type="Node2D" parent="." node_paths=PackedStringArray("drzwi")]
+position = Vector2(623, 333)
+script = ExtResource("2_vudnh")
+drzwi = NodePath("../Drzwi")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Pasazer"]
+sprite_frames = SubResource("SpriteFrames_he8bl")
+frame_progress = 0.999388
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Pasazer"]
+libraries = {
+&"": SubResource("AnimationLibrary_vfgc4")
+}
