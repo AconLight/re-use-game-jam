@@ -33,7 +33,7 @@ func load_asset(name) -> AnimatedSprite2D:
 	
 func load_prefabs(prefabs, width):
 	for prefab in prefabs:
-		tiles_dict[prefab.get_name] = {
+		tiles_dict["prefab"] = {
 			"textures": [prefab],
 			"width": width
 		}
