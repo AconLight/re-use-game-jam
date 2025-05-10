@@ -1,47 +1,104 @@
-[gd_scene load_steps=8 format=3 uid="uid://ejdt6jf14nht"]
+[gd_scene load_steps=16 format=3 uid="uid://ejdt6jf14nht"]
 
 [ext_resource type="Script" path="res://scenes/drzwi.gd" id="1_euqvm"]
-[ext_resource type="Script" path="res://scripts/predkosc tramwaju.gd" id="1_knm5o"]
 [ext_resource type="Texture2D" uid="uid://db7jksotajtda" path="res://assets/graphics/icon.svg" id="2_he8bl"]
-[ext_resource type="Script" uid="uid://b1syl6wydmc6u" path="res://scripts/pasazer_ruch.gd" id="2_vudnh"]
-[ext_resource type="Texture2D" uid="uid://dclfgl634251y" path="res://assets/graphics/zombie/zombie_hurt.png" id="3_wnnxy"]
-[ext_resource type="Texture2D" uid="uid://bs3r2ns4ex6um" path="res://assets/graphics/zombie/zombie_idle.png" id="4_euqvm"]
+[ext_resource type="PackedScene" uid="uid://copk62cxa3fg0" path="res://scenes/pasazer.tscn" id="4_wnnxy"]
+[ext_resource type="Texture2D" uid="uid://bh2g6daxp5t2j" path="res://assets/graphics/geniusz/obciąg1.png" id="5_wkxhr"]
+[ext_resource type="Texture2D" uid="uid://b6ia8ncc2lqla" path="res://assets/graphics/geniusz/obciąg2.png" id="6_ywcv8"]
+[ext_resource type="Texture2D" uid="uid://dbnyg7ljo0nge" path="res://assets/graphics/geniusz/obciąg3.png" id="7_8g6d0"]
+[ext_resource type="Texture2D" uid="uid://c5s0pdyf3gmej" path="res://assets/graphics/geniusz/obciąg4.png" id="8_3c3sr"]
+[ext_resource type="Texture2D" uid="uid://ca23ha2u42geo" path="res://assets/graphics/geniusz/obciąg5.png" id="9_7k33y"]
+[ext_resource type="Texture2D" uid="uid://ddr5folx5nsfk" path="res://assets/graphics/geniusz/obciąg6.png" id="10_284a5"]
+[ext_resource type="Texture2D" uid="uid://duh5vk4gcvvsq" path="res://assets/graphics/geniusz/obciąg7.png" id="11_ac3wo"]
+[ext_resource type="Texture2D" uid="uid://cg3wqpjt18tlv" path="res://assets/graphics/geniusz/obciąg8.png" id="12_os7nu"]
+[ext_resource type="Texture2D" uid="uid://dji2slbgkgyoi" path="res://assets/graphics/geniusz/obciąg9.png" id="13_2vb5t"]
+[ext_resource type="Texture2D" uid="uid://rlnjn7wfe22g" path="res://assets/graphics/geniusz/obciąg10.png" id="14_s7kaj"]
+[ext_resource type="Script" uid="uid://woj5ve7mqhi7" path="res://scripts/predkosctramwajufix.gd" id="14_wkxhr"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_he8bl"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_a7m6s"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_wnnxy")
+"duration": 0.5,
+"texture": ExtResource("5_wkxhr")
 }, {
-"duration": 1.0,
-"texture": ExtResource("4_euqvm")
+"duration": 0.5,
+"texture": ExtResource("6_ywcv8")
+}, {
+"duration": 0.5,
+"texture": ExtResource("7_8g6d0")
+}, {
+"duration": 0.5,
+"texture": ExtResource("8_3c3sr")
+}, {
+"duration": 0.5,
+"texture": ExtResource("9_7k33y")
+}, {
+"duration": 0.5,
+"texture": ExtResource("10_284a5")
+}, {
+"duration": 0.5,
+"texture": ExtResource("11_ac3wo")
+}, {
+"duration": 0.5,
+"texture": ExtResource("12_os7nu")
+}, {
+"duration": 0.5,
+"texture": ExtResource("13_2vb5t")
+}, {
+"duration": 0.5,
+"texture": ExtResource("14_s7kaj")
 }],
 "loop": true,
-"name": &"default",
+"name": &"jedzie",
 "speed": 5.0
 }]
 
 [node name="EmptyNode" type="Node"]
 
 [node name="Drzwi" type="Node2D" parent="."]
-position = Vector2(299, 214)
+position = Vector2(321, 311)
 script = ExtResource("1_euqvm")
 
 [node name="Sprite2D" type="Sprite2D" parent="Drzwi"]
 texture = ExtResource("2_he8bl")
 
-[node name="Node2D" type="Node2D" parent="."]
-script = ExtResource("1_knm5o")
+[node name="Przystanek" type="Node2D" parent="."]
+z_index = 1
 
-[node name="NaklejkaPredkosci" type="Label" parent="Node2D"]
-offset_right = 40.0
-offset_bottom = 23.0
+[node name="Pasazer" parent="Przystanek" node_paths=PackedStringArray("drzwi") instance=ExtResource("4_wnnxy")]
+position = Vector2(862, 547)
+drzwi = NodePath("../../Drzwi")
 
-[node name="Pasazer" type="Node2D" parent="." node_paths=PackedStringArray("drzwi")]
-position = Vector2(623, 333)
-script = ExtResource("2_vudnh")
-drzwi = NodePath("../Drzwi")
+[node name="Pasazer2" parent="Przystanek" node_paths=PackedStringArray("drzwi") instance=ExtResource("4_wnnxy")]
+position = Vector2(706, 540)
+drzwi = NodePath("../../Drzwi")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Pasazer"]
-sprite_frames = SubResource("SpriteFrames_he8bl")
-frame_progress = 0.845205
+[node name="Pasazer3" parent="Przystanek" node_paths=PackedStringArray("drzwi") instance=ExtResource("4_wnnxy")]
+position = Vector2(524, 553)
+drzwi = NodePath("../../Drzwi")
+
+[node name="Pasazer4" parent="Przystanek" node_paths=PackedStringArray("drzwi") instance=ExtResource("4_wnnxy")]
+position = Vector2(300, 554)
+drzwi = NodePath("../../Drzwi")
+
+[node name="Pasazer5" parent="Przystanek" node_paths=PackedStringArray("drzwi") instance=ExtResource("4_wnnxy")]
+position = Vector2(82, 514)
+drzwi = NodePath("../../Drzwi")
+
+[node name="Pociag" type="Node2D" parent="."]
+position = Vector2(581, 65)
+scale = Vector2(6, 6)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Pociag"]
+sprite_frames = SubResource("SpriteFrames_a7m6s")
+animation = &"jedzie"
+autoplay = "jedzie"
+
+[node name="GUI" type="Node2D" parent="."]
+script = ExtResource("14_wkxhr")
+
+[node name="SpeedLabel" type="Label" parent="GUI"]
+offset_left = 94.0
+offset_top = 35.0
+offset_right = 134.0
+offset_bottom = 58.0

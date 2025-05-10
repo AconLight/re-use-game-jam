@@ -14,4 +14,5 @@ func _ready():
 		"global_position",
 		target_position,
 		1.0
-	)
+		)
+	tween.tween_callback(Callable(self,"queue_free"))

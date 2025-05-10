@@ -1,7 +1,8 @@
 extends Node
 
+
 @onready var predkosc_tramwaju = 0
-@onready var naklejka_predkosci = $NaklejkaPredkosci  # Reference to the Label node
+@onready var naklejka_predkosci = $SpeedLabel  # Reference to the Label node
 var gaz_wcisniety = false  # Tracks whether the "gaz" button is pressed
 var hamulec_wcisniety = false  # Tracks whether the "hamulec" button is pressed
 var drag = 2  # Drag value to reduce speed when no button is pressed
@@ -26,14 +27,21 @@ func _process(delta: float) -> void:
 	naklejka_predkosci.text = str(int(predkosc_tramwaju))  # Update the Label with the integer value
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_up"):  # Check if the up-arrow key is pressed
-		_gaz()
-	elif event.is_action_released("ui_up"):  # Check if the up-arrow key is released
+	# Check if the up-arrow key is pressed or released
+	if event.is_action_pressed("ui_up"):
+		gaz_wcisniety = true
+		print("ui_up pressed")
+	elif event.is_action_released("ui_up"):
 		gaz_wcisniety = false
-	if event.is_action_pressed("ui_down"):  # Check if the down-arrow key is pressed
-		_hamulec()
-	elif event.is_action_released("ui_down"):  # Check if the down-arrow key is released
+		print("ui_up released")
+
+	# Check if the down-arrow key is pressed or released
+	if event.is_action_pressed("ui_down"):
+		hamulec_wcisniety = true
+		print("ui_down pressed")
+	elif event.is_action_released("ui_down"):
 		hamulec_wcisniety = false
+		print("ui_down released")
 
 func _on_button_pressed() -> void:
 	gaz_wcisniety = true  # Start increasing speed
