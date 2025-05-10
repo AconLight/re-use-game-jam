@@ -31,6 +31,13 @@ func load_asset(name) -> AnimatedSprite2D:
 	new_asset.frames = sprite_frames
 	return new_asset
 	
+func load_prefabs(prefabs, width):
+	for prefab in prefabs:
+		tiles_dict[prefab.get_name] = {
+			"textures": [prefab],
+			"width": width
+		}
+
 func load_all(path):
 	var dir = DirAccess.open(path)
 	var files = dir.get_files()

@@ -1,5 +1,6 @@
 extends Node2D
 
+var space_between = 0
 var margin = 300
 var tile_position_x = -margin
 var next_position_x = 1500
@@ -31,6 +32,11 @@ func _process(delta):
 		
 func load_scroller(path, y, velocity_factor):
 	$AssetLoader.load_all(path)
+	position.y = y
+	self.velocity_factor = velocity_factor
+	
+func load_scroller_from_prefabs(prefabs, y, width, velocity_factor):
+	$AssetLoader.load_prefabs(prefabs, width)
 	position.y = y
 	self.velocity_factor = velocity_factor
 	
