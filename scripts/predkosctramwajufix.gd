@@ -3,7 +3,10 @@ extends Node
 @export var melin:Node2D
 
 @onready var predkosc_tramwaju = 0
+@onready var wynik = 0
 @onready var naklejka_predkosci = $SpeedLabel  # Reference to the Label node
+@onready var naklejka_wyniku = $ScoreLabel
+
 var gaz_wcisniety = false  # Tracks whether the "gaz" button is pressed
 var hamulec_wcisniety = false  # Tracks whether the "hamulec" button is pressed
 var drag = 2  # Drag value to reduce speed when no button is pressed
@@ -28,6 +31,10 @@ func _process(delta: float) -> void:
 
 	naklejka_predkosci.text = str(int(predkosc_tramwaju))  # Update the Label with the integer value
 	melin.get_children()[0].velocity = predkosc_tramwaju
+	
+func update_score(score) -> void:
+	wynik += score
+	naklejka_wyniku.text = wynik
 	
 func _input(event: InputEvent) -> void:
 	# Check if the up-arrow key is pressed or released
