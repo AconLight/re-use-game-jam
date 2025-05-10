@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://gnpa1udn1jdk"]
 
-[node name="EmptyNode" type="Node"]
+[node name="EmptyNode2" type="Node"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
