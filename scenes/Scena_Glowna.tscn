@@ -1,12 +1,9 @@
-
 [gd_scene load_steps=8 format=3 uid="uid://sj2s165pj43"]
 
 [ext_resource type="PackedScene" uid="uid://b5nn8eac1rbl5" path="res://scenes/melin.tscn" id="1_0iy7v"]
-
 [ext_resource type="Script" path="res://scenes/drzwi.gd" id="1_euqvm"]
 [ext_resource type="PackedScene" uid="uid://d3rukusfkr0fr" path="res://scenes/muzyczka.tscn" id="1_r72ry"]
 [ext_resource type="Texture2D" uid="uid://db7jksotajtda" path="res://assets/graphics/icon.svg" id="2_he8bl"]
-
 [ext_resource type="PackedScene" uid="uid://bu71rdm6avi7w" path="res://scenes/pociag.tscn" id="6_he8bl"]
 [ext_resource type="PackedScene" uid="uid://btwi48vqr86tg" path="res://scenes/przystanek.tscn" id="7_0iy7v"]
 [ext_resource type="Script" uid="uid://woj5ve7mqhi7" path="res://scripts/predkosctramwajufix.gd" id="14_wkxhr"]

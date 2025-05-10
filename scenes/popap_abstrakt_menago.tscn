@@ -34,7 +34,6 @@ theme_override_font_sizes/mono_font_size = 100
 theme_override_font_sizes/normal_font_size = 100
 theme_override_font_sizes/bold_font_size = 100
 bbcode_enabled = true
-text = "text text text"
 horizontal_alignment = 1
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
