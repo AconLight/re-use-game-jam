@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hoqve65yi3sk"
-path="res://.godot/imported/dąb1.png-4d27c8446f0ed8f14f1532a63b29cb37.ctex"
+uid="uid://d36blkbnv7ckl"
+path="res://.godot/imported/kamienicd1.png-0c3dabe17be4b565c3418356d32813cc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/graphics/scroller_buildings/dąb1.png"
-dest_files=["res://.godot/imported/dąb1.png-4d27c8446f0ed8f14f1532a63b29cb37.ctex"]
+source_file="res://assets/graphics/scroller_buildings/kamienicd1.png"
+dest_files=["res://.godot/imported/kamienicd1.png-0c3dabe17be4b565c3418356d32813cc.ctex"]
 
 [params]
 

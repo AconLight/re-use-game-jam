@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3gu3t1myrx7f"
-path="res://.godot/imported/droga1.png-f783c5521ee5352d08325714516d480f.ctex"
+uid="uid://d2nijgbikurpk"
+path="res://.godot/imported/kamienica duo1.png-24e00444deaa22ebb1887f67ce5e7130.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/graphics/nowe graphic assety/droga1.png"
-dest_files=["res://.godot/imported/droga1.png-f783c5521ee5352d08325714516d480f.ctex"]
+source_file="res://assets/graphics/scroller_buildings/kamienica duo1.png"
+dest_files=["res://.godot/imported/kamienica duo1.png-24e00444deaa22ebb1887f67ce5e7130.ctex"]
 
 [params]
 
