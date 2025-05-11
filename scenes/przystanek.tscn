@@ -36,3 +36,4 @@ przystanek = NodePath("..")
 
 [node name="Slup" parent="." instance=ExtResource("2_ybcsy")]
 position = Vector2(626, 553)
+scale = Vector2(3, 3)

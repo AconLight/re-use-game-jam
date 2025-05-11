@@ -53,14 +53,24 @@ func _process(delta):
 	for scroller in scrollers:
 		scroller.velocity = velocity*velocity_factor
 		
+		
+	var offset = 0
 	#print("stop_scroller.tiles.size() > 0" + stop_scroller.tiles.size() > 0)
-	if stop_scroller.tiles.size() > 0 and velocity <= 0.00001:
-		print("prces scrall manager")
-		print(stop_scroller.tiles.size())
-		print("not stop_scroller.tiles[0].hasCalculated" )
-		print(not stop_scroller.tiles[0].hasCalculated)
+	if stop_scroller.tiles.size() > 1 and velocity <= 0.00001: 
+		for i in range(stop_scroller.tiles.size()):
+			
+			offset = 2
+			print(stop_scroller.tiles.size())
+			if stop_scroller.tiles[i].hasCalculated == false:
+				print("prces scrall manager")
+				print(stop_scroller.tiles.size())
+				print("not stop_scroller.tiles[0].hasCalculated" )
+				print(not stop_scroller.tiles[i].hasCalculated)
+			
+				pociong.measure_distance_and_call(stop_scroller.tiles[i])
+			
 
-		pociong.measure_distance_and_call(stop_scroller.tiles[0])
-		stop_scroller.tiles[0].hasCalculated = true
+			
+			
 		
 	

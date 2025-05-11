@@ -4,7 +4,7 @@ extends Node2D
 @onready var animated_sprite = $AnimatedSprite2D 
 # Reference to the AnimatedSprite node
 
-func _ready():
+func wsiadac():
 	animated_sprite.play("default")  # Replace "default" with the name of
 	# Tween movement to the target position
 	# TODO STEFAN

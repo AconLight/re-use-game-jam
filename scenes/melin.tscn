@@ -12,6 +12,7 @@ script = ExtResource("1_n2rp7")
 przystanek = NodePath("Przystanek")
 
 [node name="ScrollManager" type="Node2D" parent="."]
+z_index = -4
 script = ExtResource("1_wgt5w")
 
 [node name="Scroller" type="Node2D" parent="ScrollManager"]
@@ -25,5 +26,5 @@ position = Vector2(0, -105)
 drzwi_przystanek = NodePath("../Drzwi")
 
 [node name="Drzwi" type="Node2D" parent="."]
-position = Vector2(321, 455)
+position = Vector2(318, 304)
 script = ExtResource("6_mnc2m")
