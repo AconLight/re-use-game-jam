@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://qvg8rvah6i7f"]
+[gd_scene load_steps=3 format=3 uid="uid://dix2lkw53jk8j"]
 
-[ext_resource type="Texture2D" uid="uid://db7jksotajtda" path="res://assets/graphics/icon.svg" id="1_ujesl"]
+[ext_resource type="Texture2D" uid="uid://cda3y0xk8issu" path="res://assets/graphics/przystanek.png" id="1_ujesl"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3hvsh"]
 animations = [{
@@ -16,4 +16,7 @@ animations = [{
 [node name="Slup" type="Node2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 1
+position = Vector2(0, -51.72)
+scale = Vector2(5.35, 5.35)
 sprite_frames = SubResource("SpriteFrames_3hvsh")

@@ -40,8 +40,8 @@ func _ready() -> void:
 		cars_scroller,
 		stop_scroller]
 		
-	background_scroller.load_scroller(path_background, 0, 0.2)
-
+	background_scroller.load_scroller(path_background, 200, 0.2)
+	background_scroller.width_factor = 0.85
 	back_pavement_scroller.load_scroller(path_pavement, 400, 1)
 	back_pavement_scroller.width_factor = 0.85
 	building_scroller.load_scroller(path_buildings, 58, 1)
@@ -54,7 +54,7 @@ func _ready() -> void:
 	stop_prefab = get_parent().przystanek
 	stop_prefab.visible = true
 	var stop_width = 2000
-	stop_scroller.load_scroller_prefab(stop_prefab, 2000, 0, 0.3)
+	stop_scroller.load_scroller_prefab(stop_prefab, 2000, 0, 0.4)
 	stop_scroller.max_tiles_width = stop_width * 5
 	
 	pociong = get_parent().pociong

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cm5513x4g38tu" path="res://scenes/przystanek.gd" id="1_e4ryh"]
 [ext_resource type="PackedScene" path="res://scenes/pasazer.tscn" id="1_mx171"]
-[ext_resource type="PackedScene" path="res://scenes/slup.tscn" id="2_ybcsy"]
+[ext_resource type="PackedScene" uid="uid://dix2lkw53jk8j" path="res://scenes/slup.tscn" id="2_ybcsy"]
 
 [node name="Przystanek" type="Node2D" node_paths=PackedStringArray("slup")]
 script = ExtResource("1_e4ryh")
