@@ -3,7 +3,9 @@ var path = "res://assets/graphics/scroller_tiles/"
 var path_background = "res://assets/graphics/scroller_background/"
 var path_buildings = "res://assets/graphics/scroller_buildings/"
 var path_cars = "res://assets/graphics/scroller_cars/"
+var path_cars_cars = "res://assets/graphics/scroller_carscars/"
 var path_pavement = "res://assets/graphics/scroller_pavement/"
+var path_front_pavement = "res://assets/graphics/scroller_front_pavement/"
 @onready var scroller = $Scroller
 
 @export var drzwi:Node2D
@@ -15,6 +17,8 @@ var background_scroller
 var building_scroller
 var back_pavement_scroller
 var cars_scroller
+var front_pavement_scroller
+var cars_cars_scroller
 
 var stop_prefab
 
@@ -32,6 +36,8 @@ func _ready() -> void:
 	building_scroller = $Scroller.duplicate()
 	back_pavement_scroller = $Scroller.duplicate()
 	cars_scroller = $Scroller.duplicate()
+	cars_cars_scroller = $Scroller.duplicate()
+	front_pavement_scroller = $Scroller.duplicate()
 	stop_scroller = $Scroller.duplicate()
 	
 	scrollers = [
@@ -40,6 +46,8 @@ func _ready() -> void:
 		back_pavement_scroller, 
 		building_scroller, 
 		cars_scroller,
+		cars_cars_scroller,
+		front_pavement_scroller,
 		stop_scroller]
 		
 	background_scroller.load_scroller(path_background, 200, 0.2)
@@ -54,6 +62,15 @@ func _ready() -> void:
 	cars_scroller.width_factor = 4
 	cars_scroller.scl_factor = 0.6
 	cars_scroller.rnd_factor = 200
+	
+	cars_cars_scroller.load_scroller(path_cars_cars, 230, 1.4)
+	cars_cars_scroller.scl_factor = 6
+	cars_cars_scroller.width_factor = 3
+	cars_cars_scroller.rnd_factor = 300
+	
+	back_pavement_scroller.load_scroller(path_front_pavement, 390, 1)
+	back_pavement_scroller.width_factor = 0.85
+	back_pavement_scroller.scl_factor = 1.85
 	
 	#stop_prefab = get_parent().przystanek
 	var stop_prefab = preload("res://scenes/przystanek.tscn")
