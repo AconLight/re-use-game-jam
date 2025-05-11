@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bd50jb6aey874"
-path="res://.godot/imported/niebo1.png-0e5804b1963b0d9ff68d84deff051409.ctex"
+uid="uid://dnwc2njfng583"
+path="res://.godot/imported/dąb.png-8661ec3adcd6aa32f13eb6c77931feb4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/graphics/scroller_background/niebo1.png"
-dest_files=["res://.godot/imported/niebo1.png-0e5804b1963b0d9ff68d84deff051409.ctex"]
+source_file="res://assets/graphics/dąb.png"
+dest_files=["res://.godot/imported/dąb.png-8661ec3adcd6aa32f13eb6c77931feb4.ctex"]
 
 [params]
 

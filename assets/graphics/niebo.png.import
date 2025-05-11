@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3gu3t1myrx7f"
-path="res://.godot/imported/droga1.png-28fad066e9e6bd6eeca6de9e694bd7da.ctex"
+uid="uid://bckmndm7pbi0f"
+path="res://.godot/imported/niebo.png-47fe0511939b598442f5cd289b492921.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/graphics/scroller_pavement/droga1.png"
-dest_files=["res://.godot/imported/droga1.png-28fad066e9e6bd6eeca6de9e694bd7da.ctex"]
+source_file="res://assets/graphics/niebo.png"
+dest_files=["res://.godot/imported/niebo.png-47fe0511939b598442f5cd289b492921.ctex"]
 
 [params]
 
