@@ -43,6 +43,7 @@ position = Vector2(-599, 392)
 scale = Vector2(7.335, 7.335)
 texture = ExtResource("7_xgru8")
 
+
 [connection signal="wsiadac" from="." to="Pasazer3" method="wsiadac"]
 [connection signal="wsiadac" from="." to="Pasazer4" method="wsiadac"]
 [connection signal="wsiadac" from="." to="Pasazer5" method="wsiadac"]
