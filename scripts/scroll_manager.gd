@@ -53,6 +53,8 @@ func _ready() -> void:
 	cars_scroller.rnd_factor = 200
 	
 	stop_prefab = get_parent().przystanek
+	#var stop_prefab = preload("res://scenes/przystanek.tscn")
+	#var stop_instance = stop_prefab.instantiate()
 	stop_prefab.visible = true
 	var stop_width = 2000
 	stop_scroller.load_scroller_prefab(stop_prefab, 2000, 0, 0.4)
@@ -71,18 +73,27 @@ func _process(delta):
 		
 	var offset = 0
 	#print("stop_scroller.tiles.size() > 0" + stop_scroller.tiles.size() > 0)
-	if stop_scroller.tiles.size() > 1 and velocity <= 0.00001: 
-		for i in range(stop_scroller.tiles.size()):
-			
-			offset = 2
-			print(stop_scroller.tiles.size())
-			if stop_scroller.tiles[i].hasCalculated == false:
-				print("prces scrall manager")
-				print(stop_scroller.tiles.size())
-				print("not stop_scroller.tiles[0].hasCalculated" )
-				print(not stop_scroller.tiles[i].hasCalculated)
-			
-				pociong.measure_distance_and_call(stop_scroller.tiles[i])
+	#if stop_scroller.tiles.size() > 1 and velocity <= 0.00001: 
+		#for i in range(stop_scroller.tiles.size()):
+			#
+			#offset = 2
+			#print(stop_scroller.tiles.size())
+			#if stop_scroller.tiles[i].hasCalculated == false:
+				#print("prces scrall manager")
+				#print(stop_scroller.tiles.size())
+				#print("not stop_scroller.tiles[0].hasCalculated" )
+				#print(not stop_scroller.tiles[i].hasCalculated)
+			#
+				#pociong.measure_distance_and_call(stop_scroller.tiles[i])
+		#print("stop_scroller.tiles.size() > 0" + stop_scroller.tiles.size() > 0)
+	if stop_scroller.tiles.size() > 0 and velocity <= 0.00001:
+		print("prces scrall manager")
+		print(stop_scroller.tiles.size())
+		print("not stop_scroller.tiles[0].hasCalculated" )
+		print(not stop_scroller.tiles[0].hasCalculated)
+
+		pociong.measure_distance_and_call(stop_scroller.tiles[0])
+		stop_scroller.tiles[0].hasCalculated = true
 			
 
 			
