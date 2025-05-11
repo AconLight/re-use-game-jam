@@ -6,9 +6,10 @@ var tile_position_x = -margin
 var next_position_x = 2500
 var tiles = []
 var tiles_lengths = []
-var max_tiles_width = (next_position_x + margin)*2
+var max_tiles_width = (next_position_x + margin)*4
 var velocity = 100
 var velocity_factor = 1
+var prime_velocity = 0
 var rng = RandomNumberGenerator.new()
 var width_factor = 1
 var scl_factor = 1
@@ -33,7 +34,7 @@ func _process(delta):
 	#print("scroller _process")
 	if $AssetLoader.tiles_dict.keys().size() > 0:
 		#print("add_prefab pre")
-		tile_position_x -= delta*velocity*velocity_factor
+		tile_position_x -= delta*velocity*velocity_factor + prime_velocity
 		while tile_position_x < next_position_x:
 			var tile_names = $AssetLoader.tiles_dict.keys()
 			var tile_name = tile_names[rng.randi_range(0, tile_names.size()-1)]
@@ -41,12 +42,12 @@ func _process(delta):
 			#print(tile_name)
 			add_tile(tile_name)
 	elif prefab:
-		tile_position_x -= delta*velocity*velocity_factor
+		tile_position_x -= delta*velocity*velocity_factor + prime_velocity
 		while tile_position_x < next_position_x:
 			add_prefab(self.prefab, self.prefab_width)
 
 	for tile in tiles:
-		tile.position.x -= delta*velocity*velocity_factor
+		tile.position.x -= delta*velocity*velocity_factor + prime_velocity
 		
 func load_scroller(path, y, velocity_factor):
 	$AssetLoader.load_all(path)
