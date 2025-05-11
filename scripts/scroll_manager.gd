@@ -44,8 +44,12 @@ func _ready() -> void:
 
 	back_pavement_scroller.load_scroller(path_pavement, 400, 1)
 	back_pavement_scroller.width_factor = 0.85
-	building_scroller.load_scroller(path_buildings, 50, 0.5)
-	cars_scroller.load_scroller(path_cars, 0, 1)
+	building_scroller.load_scroller(path_buildings, 58, 1)
+	building_scroller.rnd_factor = 300
+	cars_scroller.load_scroller(path_cars, 95, 1)
+	cars_scroller.width_factor = 4
+	cars_scroller.scl_factor = 0.6
+	cars_scroller.rnd_factor = 200
 	
 	stop_prefab = get_parent().przystanek
 	stop_prefab.visible = true
