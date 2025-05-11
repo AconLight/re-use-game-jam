@@ -31,3 +31,8 @@ drzwi_przystanek = NodePath("../Drzwi")
 [node name="Drzwi" type="Node2D" parent="."]
 position = Vector2(318, 187)
 script = ExtResource("6_mnc2m")
+
+[connection signal="wsiadac" from="Przystanek" to="Przystanek/Pasazer3" method="wsiadac"]
+[connection signal="wsiadac" from="Przystanek" to="Przystanek/Pasazer4" method="wsiadac"]
+[connection signal="wsiadac" from="Przystanek" to="Przystanek/Pasazer5" method="wsiadac"]
+[connection signal="wsiadac" from="Przystanek" to="Przystanek/Pasazer6" method="wsiadac"]

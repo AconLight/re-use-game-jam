@@ -13,11 +13,11 @@
 [node name="Muzyczka" parent="." instance=ExtResource("1_r72ry")]
 
 [node name="Pociag" parent="." node_paths=PackedStringArray("gui") instance=ExtResource("6_he8bl")]
-position = Vector2(0, 49.855)
+position = Vector2(0, 118)
 gui = NodePath("../GUI")
 
 [node name="Melin" parent="." node_paths=PackedStringArray("pociong") instance=ExtResource("1_0iy7v")]
-position = Vector2(0, 140)
+position = Vector2(0, 208.145)
 pociong = NodePath("../Pociag")
 
 [node name="GUI" type="Node2D" parent="." node_paths=PackedStringArray("melin", "pociag", "camera")]
