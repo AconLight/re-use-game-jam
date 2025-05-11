@@ -3,13 +3,16 @@ extends Node2D
 var space_between = 0
 var margin = 300
 var tile_position_x = -margin
-var next_position_x = 1500
+var next_position_x = 2500
 var tiles = []
 var tiles_lengths = []
-var max_tiles_width = next_position_x + margin
+var max_tiles_width = (next_position_x + margin)*2
 var velocity = 100
 var velocity_factor = 1
 var rng = RandomNumberGenerator.new()
+var width_factor = 1
+var scl_factor = 1
+var rnd_factor = 0
 
 var prefab
 var prefab_width
@@ -73,8 +76,9 @@ func add_tile(tile_name):
 	tiles_lengths.append($AssetLoader.get_asset_props(tile_name).width)
 	add_child(tile)
 	tile.position.x = tile_position_x
+	tile.scale = Vector2(scl_factor, scl_factor)
 	tile.play("default")
-	tile_position_x += tiles_lengths[-1]
+	tile_position_x += tiles_lengths[-1]*width_factor*scl_factor + rng.randf()*rnd_factor
 	var tiles_all_width = tiles_lengths.reduce(func(accum, value): return accum + value, 0)
 	if tiles_all_width > max_tiles_width:
 		remove_child(tiles[0])

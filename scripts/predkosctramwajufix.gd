@@ -2,6 +2,7 @@ extends Node
 
 @export var melin:Node2D
 @export var pociag:Node2D
+@export var camera:Camera2D
 @onready var predkosc_tramwaju = 0
 @onready var wynik = 0
 @onready var naklejka_predkosci = $SpeedLabel
@@ -39,6 +40,10 @@ func _process(delta: float) -> void:
 
 	naklejka_predkosci.text = str(int(predkosc_tramwaju))  # Update the Label with the integer value
 	melin.get_children()[0].velocity = predkosc_tramwaju
+	var x = 5
+	var zoom = 1.7 - (predkosc_tramwaju+x)/(40+x)
+	zoom = zoom**0.5
+	camera.zoom = Vector2(zoom, zoom)
 	
 func update_score(score) -> void:
 	wynik += score
