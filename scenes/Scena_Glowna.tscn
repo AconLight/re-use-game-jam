@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://ejdt6jf14nht"]
 
 [ext_resource type="PackedScene" uid="uid://byjgipxlrbee7" path="res://scenes/melin.tscn" id="1_0iy7v"]
-[ext_resource type="PackedScene" uid="uid://d3rukusfkr0fr" path="res://scenes/muzyczka.tscn" id="1_r72ry"]
+[ext_resource type="PackedScene" path="res://scenes/muzyczka.tscn" id="1_r72ry"]
 [ext_resource type="PackedScene" uid="uid://bk7edejf0r873" path="res://scenes/Prolog.tscn" id="6_0iy7v"]
 [ext_resource type="PackedScene" uid="uid://bu71rdm6avi7w" path="res://scenes/pociag.tscn" id="6_he8bl"]
-[ext_resource type="PackedScene" uid="uid://5m56vols5nkq" path="res://scenes/intro.tscn" id="6_r72ry"]
+[ext_resource type="PackedScene" uid="uid://fbx3dmt4hkir" path="res://scenes/intro.tscn" id="6_r72ry"]
 [ext_resource type="PackedScene" uid="uid://b00rrt5d8bmm3" path="res://scenes/outro.tscn" id="8_2s2ie"]
 [ext_resource type="Script" uid="uid://woj5ve7mqhi7" path="res://scripts/predkosctramwajufix.gd" id="14_wkxhr"]
 
