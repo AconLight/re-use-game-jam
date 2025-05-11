@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://sj2s165pj43"]
 
 [ext_resource type="PackedScene" uid="uid://byjgipxlrbee7" path="res://scenes/melin.tscn" id="1_0iy7v"]
-[ext_resource type="PackedScene" uid="uid://d3rukusfkr0fr" path="res://scenes/muzyczka.tscn" id="1_r72ry"]
+[ext_resource type="PackedScene" path="res://scenes/muzyczka.tscn" id="1_r72ry"]
 [ext_resource type="PackedScene" uid="uid://bk7edejf0r873" path="res://scenes/Prolog.tscn" id="6_0iy7v"]
 [ext_resource type="PackedScene" uid="uid://bu71rdm6avi7w" path="res://scenes/pociag.tscn" id="6_he8bl"]
 [ext_resource type="PackedScene" uid="uid://5m56vols5nkq" path="res://scenes/intro.tscn" id="6_r72ry"]
@@ -46,7 +46,6 @@ offset_bottom = 293.0
 visible = false
 
 [node name="Control" parent="." instance=ExtResource("6_0iy7v")]
-visible = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(578, 324)
