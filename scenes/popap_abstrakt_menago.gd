@@ -19,7 +19,10 @@ func poka(popapik: int):
 
 	var tween := create_tween()
 	#tween.tween_interval(0.3)
-	dzwonek.play(0.1)
+	if !dzwonek.playing:
+		dzwonek.play(0.1)
+	
+	
 	tween.tween_property(tekst, "modulate:a", 1.0, 0.1) # Fade in
 
 	tween.tween_interval(0.5) # Czekaj, aż tekst będzie widoczny

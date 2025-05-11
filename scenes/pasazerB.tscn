@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://kehkhooj12da"]
+[gd_scene load_steps=11 format=3 uid="uid://kehkhooj12da"]
 
 [ext_resource type="Script" uid="uid://b1syl6wydmc6u" path="res://scripts/pasazer_ruch.gd" id="1_1jyli"]
 [ext_resource type="Texture2D" uid="uid://dkd1fntsfog1j" path="res://assets/graphics/klient garnitur/klient garnitur1.png" id="2_1jyli"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://r06gkuj8duw8" path="res://assets/graphics/klient garnitur/klient garnitur5.png" id="6_6q2b3"]
 [ext_resource type="Texture2D" uid="uid://cwv8kmch64vrh" path="res://assets/graphics/klient garnitur/klient garnitur6.png" id="7_e55yh"]
 [ext_resource type="Texture2D" uid="uid://d12uxejbhnrgl" path="res://assets/graphics/klient garnitur/klient garnitur7.png" id="8_fphcj"]
+[ext_resource type="AudioStream" uid="uid://b0u3vnn33rgv1" path="res://assets/audio/fx/kroki_wsiadanie.mp3" id="9_d6y3v"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_47ama"]
 animations = [{
@@ -41,9 +42,13 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Pasazer" type="Node2D"]
+[node name="Pasazer" type="Node2D" node_paths=PackedStringArray("kroki")]
 script = ExtResource("1_1jyli")
+kroki = NodePath("AudioStreamPlayer2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_47ama")
 speed_scale = 1.2
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_d6y3v")
