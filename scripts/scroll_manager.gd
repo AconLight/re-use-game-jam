@@ -54,7 +54,7 @@ func _ready() -> void:
 		front_pavement_scroller,
 		stop_scroller]
 		
-	background_scroller.load_scroller(path_background, 200, 0.2)
+	background_scroller.load_scroller(path_background, 200, 0.4)
 	background_scroller.width_factor = 0.95
 	back_pavement_scroller.load_scroller(path_pavement, 390, 1)
 	back_pavement_scroller.width_factor = 0.85
