@@ -10,6 +10,9 @@ func emit():
 	emit_signal("wsiadac") 
 func get_drzwi():
 	return drzwi_przystanek
+	
+func set_drzwi(drzwi):
+	drzwi_przystanek = drzwi
 
 func get_slup():
 	return slup

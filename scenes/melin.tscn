@@ -11,9 +11,10 @@
 script = ExtResource("1_n2rp7")
 przystanek = NodePath("Przystanek")
 
-[node name="ScrollManager" type="Node2D" parent="."]
+[node name="ScrollManager" type="Node2D" parent="." node_paths=PackedStringArray("drzwi")]
 z_index = -4
 script = ExtResource("1_wgt5w")
+drzwi = NodePath("../Drzwi")
 
 [node name="Scroller" type="Node2D" parent="ScrollManager"]
 script = ExtResource("1_fspbq")
@@ -22,9 +23,17 @@ script = ExtResource("1_fspbq")
 script = ExtResource("2_s0w3l")
 
 [node name="Przystanek" parent="." node_paths=PackedStringArray("drzwi_przystanek") instance=ExtResource("5_mxc00")]
+visible = false
 position = Vector2(0, -105)
 drzwi_przystanek = NodePath("../Drzwi")
 
 [node name="Drzwi" type="Node2D" parent="."]
 position = Vector2(318, 304)
 script = ExtResource("6_mnc2m")
+
+[connection signal="wsiadac" from="Przystanek" to="Przystanek/Pasazer" method="wsiadac"]
+[connection signal="wsiadac" from="Przystanek" to="Przystanek/Pasazer2" method="wsiadac"]
+[connection signal="wsiadac" from="Przystanek" to="Przystanek/Pasazer3" method="wsiadac"]
+[connection signal="wsiadac" from="Przystanek" to="Przystanek/Pasazer4" method="wsiadac"]
+[connection signal="wsiadac" from="Przystanek" to="Przystanek/Pasazer5" method="wsiadac"]
+[connection signal="wsiadac" from="Przystanek" to="Przystanek/Pasazer6" method="wsiadac"]

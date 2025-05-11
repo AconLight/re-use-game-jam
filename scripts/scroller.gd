@@ -14,6 +14,8 @@ var width_factor = 1
 var scl_factor = 1
 var rnd_factor = 0
 
+var drzwi
+
 var prefab
 var prefab_width
 var prefabIdx = 0
@@ -51,14 +53,17 @@ func load_scroller(path, y, velocity_factor):
 	position.y = y
 	self.velocity_factor = velocity_factor
 	
-func load_scroller_prefab(prefab, width, y, velocity_factor):
+func load_scroller_prefab(prefab, width, y, velocity_factor, drzwi):
+	self.drzwi = drzwi
 	self.prefab = prefab
+	self
 	self.prefab_width = width
 	position.y = y
 	self.velocity_factor = velocity_factor
 
 func add_prefab(prefab, width):
-	var tile = prefab
+	var tile = prefab.instantiate()
+	tile.set_drzwi(drzwi)
 	tiles.append(tile)
 	tiles_lengths.append(width)
 	add_child(tile)

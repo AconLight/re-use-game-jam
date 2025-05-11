@@ -6,6 +6,8 @@ var path_cars = "res://assets/graphics/scroller_cars/"
 var path_pavement = "res://assets/graphics/scroller_pavement/"
 @onready var scroller = $Scroller
 
+@export var drzwi:Node2D
+
 var velocity = 100
 var velocity_factor = 10
 
@@ -52,12 +54,12 @@ func _ready() -> void:
 	cars_scroller.scl_factor = 0.6
 	cars_scroller.rnd_factor = 200
 	
-	stop_prefab = get_parent().przystanek
-	#var stop_prefab = preload("res://scenes/przystanek.tscn")
-	#var stop_instance = stop_prefab.instantiate()
-	stop_prefab.visible = true
+	#stop_prefab = get_parent().przystanek
+	var stop_prefab = preload("res://scenes/przystanek.tscn")
+
+	#stop_prefab.visible = true
 	var stop_width = 2000
-	stop_scroller.load_scroller_prefab(stop_prefab, 2000, 0, 0.4)
+	stop_scroller.load_scroller_prefab(stop_prefab, 2000, 0, 0.4, drzwi)
 	stop_scroller.max_tiles_width = stop_width * 5
 	
 	pociong = get_parent().pociong
@@ -86,14 +88,15 @@ func _process(delta):
 			#
 				#pociong.measure_distance_and_call(stop_scroller.tiles[i])
 		#print("stop_scroller.tiles.size() > 0" + stop_scroller.tiles.size() > 0)
-	if stop_scroller.tiles.size() > 0 and velocity <= 0.00001:
-		print("prces scrall manager")
-		print(stop_scroller.tiles.size())
-		print("not stop_scroller.tiles[0].hasCalculated" )
-		print(not stop_scroller.tiles[0].hasCalculated)
+	for tile in stop_scroller.tiles:
+		if stop_scroller.tiles.size() > 1 and velocity <= 0.00001:
+			print("prces scrall manager")
+			print(stop_scroller.tiles.size())
+			print("not stop_scroller.tiles[0].hasCalculated" )
+			print(not stop_scroller.tiles[0].hasCalculated)
 
-		pociong.measure_distance_and_call(stop_scroller.tiles[0])
-		stop_scroller.tiles[0].hasCalculated = true
+			pociong.measure_distance_and_call(tile)
+			tile.hasCalculated = true
 			
 
 			
