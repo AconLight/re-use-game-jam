@@ -52,7 +52,7 @@ func update_score(score) -> void:
 func _input(event: InputEvent) -> void:
 	# Check if the up-arrow key is pressed or released
 	if event.is_action_pressed("ui_up"):
-		intro.visible = false
+		intro.schowaj()
 		gaz_wcisniety = true
 		#print("ui_up pressed")
 	elif event.is_action_released("ui_up"):
@@ -75,7 +75,7 @@ func _input(event: InputEvent) -> void:
 			outro.prosze_pokazac_artykul(3)
 	if Input.is_key_pressed(KEY_P):
 		outro.visible = false
-		intro.visible = true
+		intro.poka()
 		wynik = 0
 		
 

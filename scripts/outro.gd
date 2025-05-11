@@ -2,6 +2,7 @@ extends Node2D
 
 @export var naglowek: Label
 @export var akapit: Label
+@export var audio:AudioStreamPlayer2D
 
 #func _ready():
 	#prosze_pokazac_artykul(4)
@@ -9,6 +10,7 @@ extends Node2D
 #1 bardzo dobrze #2 srednio #3 zle #4 tramwaj nie dojechal
 func prosze_pokazac_artykul(wariant : int):
 	visible = true
+	audio.play()
 	if(wariant == 1):
 		naglowek.text = ("Kurs bez zarzutu!")
 		akapit.text =("Jan Kowalski poprowadził dziś pierwszy tramwaj elektryczny przez Warszawę bez najmniejszych problemów. Pasażerowie chwalili spokój i pewną rękę motorniczego. Nowa era rozpoczęta z klasą!")
