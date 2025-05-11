@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://djbfk3gmb77n8" path="res://scripts/scroll_manager.gd" id="1_wgt5w"]
 [ext_resource type="Script" uid="uid://bfexvw5pwiqo5" path="res://scripts/asset_loader.gd" id="2_s0w3l"]
 [ext_resource type="PackedScene" uid="uid://btrwaov0wy1fc" path="res://scenes/przystanek.tscn" id="5_mxc00"]
-[ext_resource type="Script" path="res://scenes/drzwi.gd" id="6_mnc2m"]
+[ext_resource type="Script" uid="uid://c0udluxh7eo6a" path="res://scenes/drzwi.gd" id="6_mnc2m"]
 
 [node name="Melin" type="Node2D" node_paths=PackedStringArray("przystanek")]
 script = ExtResource("1_n2rp7")
