@@ -1,31 +1,37 @@
-[gd_scene load_steps=4 format=3 uid="uid://btrwaov0wy1fc"]
+[gd_scene load_steps=6 format=3 uid="uid://btrwaov0wy1fc"]
 
 [ext_resource type="Script" uid="uid://cm5513x4g38tu" path="res://scenes/przystanek.gd" id="1_e4ryh"]
-[ext_resource type="PackedScene" uid="uid://copk62cxa3fg0" path="res://scenes/pasazer.tscn" id="1_mx171"]
+[ext_resource type="PackedScene" uid="uid://copk62cxa3fg0" path="res://scenes/pasazerA.tscn" id="1_mx171"]
 [ext_resource type="PackedScene" uid="uid://qvg8rvah6i7f" path="res://scenes/slup.tscn" id="2_ybcsy"]
+[ext_resource type="PackedScene" uid="uid://kehkhooj12da" path="res://scenes/pasazerB.tscn" id="3_he4w1"]
+[ext_resource type="PackedScene" uid="uid://d0v75jj60l200" path="res://scenes/pasazerC.tscn" id="4_128m4"]
 
 [node name="Przystanek" type="Node2D" node_paths=PackedStringArray("slup")]
 script = ExtResource("1_e4ryh")
 slup = NodePath("Slup")
 
 [node name="Pasazer" parent="." node_paths=PackedStringArray("przystanek") instance=ExtResource("1_mx171")]
-position = Vector2(862, 547)
+position = Vector2(482, 559)
 przystanek = NodePath("..")
 
 [node name="Pasazer2" parent="." node_paths=PackedStringArray("przystanek") instance=ExtResource("1_mx171")]
-position = Vector2(706, 540)
+position = Vector2(316, 580)
 przystanek = NodePath("..")
 
-[node name="Pasazer3" parent="." node_paths=PackedStringArray("przystanek") instance=ExtResource("1_mx171")]
-position = Vector2(524, 553)
+[node name="Pasazer3" parent="." node_paths=PackedStringArray("przystanek") instance=ExtResource("3_he4w1")]
+position = Vector2(226, 561)
 przystanek = NodePath("..")
 
-[node name="Pasazer4" parent="." node_paths=PackedStringArray("przystanek") instance=ExtResource("1_mx171")]
-position = Vector2(300, 554)
+[node name="Pasazer4" parent="." node_paths=PackedStringArray("przystanek") instance=ExtResource("4_128m4")]
+position = Vector2(384, 493)
 przystanek = NodePath("..")
 
-[node name="Pasazer5" parent="." node_paths=PackedStringArray("przystanek") instance=ExtResource("1_mx171")]
-position = Vector2(82, 514)
+[node name="Pasazer5" parent="." node_paths=PackedStringArray("przystanek") instance=ExtResource("3_he4w1")]
+position = Vector2(420, 585)
+przystanek = NodePath("..")
+
+[node name="Pasazer6" parent="." node_paths=PackedStringArray("przystanek") instance=ExtResource("4_128m4")]
+position = Vector2(538, 587)
 przystanek = NodePath("..")
 
 [node name="Slup" parent="." instance=ExtResource("2_ybcsy")]

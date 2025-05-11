@@ -1,0 +1,49 @@
+[gd_scene load_steps=10 format=3 uid="uid://d0v75jj60l200"]
+
+[ext_resource type="Script" uid="uid://b1syl6wydmc6u" path="res://scripts/pasazer_ruch.gd" id="1_83jx1"]
+[ext_resource type="Texture2D" uid="uid://2m31gb8amswg" path="res://assets/graphics/klient baba/klient baba1.png" id="2_83jx1"]
+[ext_resource type="Texture2D" uid="uid://csdwvnfj3sn1t" path="res://assets/graphics/klient baba/klient baba2.png" id="3_8kvww"]
+[ext_resource type="Texture2D" uid="uid://bsd2uyx5tb7iq" path="res://assets/graphics/klient baba/klient baba3.png" id="4_wcbv4"]
+[ext_resource type="Texture2D" uid="uid://be38qbhdu8l27" path="res://assets/graphics/klient baba/klient baba4.png" id="5_vccdo"]
+[ext_resource type="Texture2D" uid="uid://bdtbk4gnf0d1i" path="res://assets/graphics/klient baba/klient baba5.png" id="6_uh0q6"]
+[ext_resource type="Texture2D" uid="uid://bq16a5f7cpt5h" path="res://assets/graphics/klient baba/klient baba6.png" id="7_616mf"]
+[ext_resource type="Texture2D" uid="uid://cgo4bttemv48o" path="res://assets/graphics/klient baba/klient baba7.png" id="8_865xh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_47ama"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_83jx1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8kvww")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wcbv4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_vccdo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_uh0q6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_616mf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_865xh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_865xh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Pasazer" type="Node2D"]
+script = ExtResource("1_83jx1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_47ama")
+speed_scale = 1.2
