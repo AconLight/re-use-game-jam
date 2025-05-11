@@ -4,8 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://d3rukusfkr0fr" path="res://scenes/muzyczka.tscn" id="1_r72ry"]
 [ext_resource type="PackedScene" uid="uid://bk7edejf0r873" path="res://scenes/Prolog.tscn" id="6_0iy7v"]
 [ext_resource type="PackedScene" uid="uid://bu71rdm6avi7w" path="res://scenes/pociag.tscn" id="6_he8bl"]
-[ext_resource type="PackedScene" uid="uid://fbx3dmt4hkir" path="res://scenes/intro.tscn" id="6_r72ry"]
-[ext_resource type="PackedScene" uid="uid://b00rrt5d8bmm3" path="res://scenes/outro.tscn" id="8_2s2ie"]
 [ext_resource type="PackedScene" uid="uid://5m56vols5nkq" path="res://scenes/intro.tscn" id="6_r72ry"]
 [ext_resource type="PackedScene" uid="uid://chb6hsshs8wfg" path="res://scenes/outro.tscn" id="8_2s2ie"]
 [ext_resource type="Script" uid="uid://woj5ve7mqhi7" path="res://scripts/predkosctramwajufix.gd" id="14_wkxhr"]
@@ -29,12 +27,14 @@ pociag = NodePath("../Pociag")
 camera = NodePath("../Camera2D")
 
 [node name="SpeedLabel" type="Label" parent="GUI"]
+visible = false
 offset_left = 938.0
 offset_top = 279.0
 offset_right = 978.0
 offset_bottom = 302.0
 
 [node name="ScoreLabel" type="Label" parent="GUI"]
+visible = false
 offset_left = 970.0
 offset_top = 270.0
 offset_right = 1010.0
