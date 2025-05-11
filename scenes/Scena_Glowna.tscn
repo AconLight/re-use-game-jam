@@ -41,11 +41,13 @@ offset_right = 1010.0
 offset_bottom = 293.0
 
 [node name="Intro" parent="GUI" instance=ExtResource("6_r72ry")]
+visible = false
 
 [node name="Outro" parent="GUI" instance=ExtResource("8_2s2ie")]
 visible = false
 
 [node name="Control" parent="." instance=ExtResource("6_0iy7v")]
+visible = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(578, 324)
