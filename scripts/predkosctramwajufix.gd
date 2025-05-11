@@ -15,14 +15,14 @@ extends Node
 var gaz_wcisniety = false  # Tracks whether the "gaz" button is pressed
 var hamulec_wcisniety = false  # Tracks whether the "hamulec" button is pressed
 var drag = 2  # Drag value to reduce speed when no button is pressed
-var max_speed = 60  # Maximum speed limit
+var max_speed = 35 # Maximum speed limit
 
 	
 func _process(delta: float) -> void:
 	if gaz_wcisniety:
 		predkosc_tramwaju += delta * 10  # Adjust the multiplier (10) to control the speed increase rate
 	if hamulec_wcisniety:
-		predkosc_tramwaju -= delta * 100  # Adjust the multiplier (15) to control the braking rate
+		predkosc_tramwaju -= delta * 12  # Adjust the multiplier (15) to control the braking rate
 	if predkosc_tramwaju > 0:  # Apply drag unconditionally when speed is greater than 0
 		predkosc_tramwaju -= delta * drag
 
