@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://sj2s165pj43"]
+[gd_scene load_steps=9 format=3 uid="uid://sj2s165pj43"]
 
 [ext_resource type="PackedScene" uid="uid://byjgipxlrbee7" path="res://scenes/melin.tscn" id="1_0iy7v"]
 [ext_resource type="Script" uid="uid://c0udluxh7eo6a" path="res://scenes/drzwi.gd" id="1_euqvm"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://db7jksotajtda" path="res://assets/graphics/icon.svg" id="2_he8bl"]
 [ext_resource type="PackedScene" uid="uid://bk7edejf0r873" path="res://scenes/Prolog.tscn" id="6_0iy7v"]
 [ext_resource type="PackedScene" uid="uid://bu71rdm6avi7w" path="res://scenes/pociag.tscn" id="6_he8bl"]
+[ext_resource type="PackedScene" uid="uid://fbx3dmt4hkir" path="res://scenes/intro.tscn" id="6_r72ry"]
 [ext_resource type="Script" uid="uid://woj5ve7mqhi7" path="res://scripts/predkosctramwajufix.gd" id="14_wkxhr"]
 
 [node name="EmptyNode" type="Node"]
@@ -25,6 +26,10 @@ script = ExtResource("1_euqvm")
 visible = false
 texture = ExtResource("2_he8bl")
 
+[node name="Pociag" parent="." node_paths=PackedStringArray("gui") instance=ExtResource("6_he8bl")]
+position = Vector2(0, 144)
+gui = NodePath("../GUI")
+
 [node name="GUI" type="Node2D" parent="." node_paths=PackedStringArray("melin", "pociag")]
 script = ExtResource("14_wkxhr")
 melin = NodePath("../Melin")
@@ -40,8 +45,6 @@ offset_bottom = 58.0
 offset_right = 40.0
 offset_bottom = 23.0
 
-[node name="Pociag" parent="." node_paths=PackedStringArray("gui") instance=ExtResource("6_he8bl")]
-position = Vector2(0, 144)
-gui = NodePath("../GUI")
+[node name="Node2D2" parent="GUI" instance=ExtResource("6_r72ry")]
 
 [node name="Control" parent="." instance=ExtResource("6_0iy7v")]
