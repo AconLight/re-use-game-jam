@@ -7,36 +7,45 @@
 [ext_resource type="PackedScene" uid="uid://d0v75jj60l200" path="res://scenes/pasazerC.tscn" id="4_128m4"]
 
 [node name="Przystanek" type="Node2D" node_paths=PackedStringArray("slup")]
+z_index = 2
+position = Vector2(0, -150)
 script = ExtResource("1_e4ryh")
 slup = NodePath("Slup")
 
 [node name="Pasazer" parent="." node_paths=PackedStringArray("przystanek") instance=ExtResource("1_mx171")]
+z_index = 2
 position = Vector2(482, 559)
 przystanek = NodePath("..")
 
 [node name="Pasazer2" parent="." node_paths=PackedStringArray("przystanek") instance=ExtResource("1_mx171")]
+z_index = 2
 position = Vector2(316, 580)
 przystanek = NodePath("..")
 
 [node name="Pasazer3" parent="." node_paths=PackedStringArray("przystanek") instance=ExtResource("3_he4w1")]
+z_index = 2
 position = Vector2(226, 561)
 przystanek = NodePath("..")
 
 [node name="Pasazer4" parent="." node_paths=PackedStringArray("przystanek") instance=ExtResource("4_128m4")]
+z_index = 2
 position = Vector2(384, 493)
 przystanek = NodePath("..")
 
 [node name="Pasazer5" parent="." node_paths=PackedStringArray("przystanek") instance=ExtResource("3_he4w1")]
+z_index = 2
 position = Vector2(420, 585)
 przystanek = NodePath("..")
 
 [node name="Pasazer6" parent="." node_paths=PackedStringArray("przystanek") instance=ExtResource("4_128m4")]
+z_index = 2
 position = Vector2(538, 587)
 przystanek = NodePath("..")
 
 [node name="Slup" parent="." instance=ExtResource("2_ybcsy")]
+z_index = 2
 position = Vector2(626, 553)
-scale = Vector2(3, 3)
+scale = Vector2(4.61, 4.61)
 
 [connection signal="wsiadac" from="." to="Pasazer" method="wsiadac"]
 [connection signal="wsiadac" from="." to="Pasazer2" method="wsiadac"]

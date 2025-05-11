@@ -22,7 +22,7 @@ func _process(delta: float) -> void:
 	if gaz_wcisniety:
 		predkosc_tramwaju += delta * 10  # Adjust the multiplier (10) to control the speed increase rate
 	if hamulec_wcisniety:
-		predkosc_tramwaju -= delta * 200  # Adjust the multiplier (15) to control the braking rate
+		predkosc_tramwaju -= delta * 100  # Adjust the multiplier (15) to control the braking rate
 	if predkosc_tramwaju > 0:  # Apply drag unconditionally when speed is greater than 0
 		predkosc_tramwaju -= delta * drag
 
@@ -41,8 +41,8 @@ func _process(delta: float) -> void:
 	naklejka_predkosci.text = str(int(predkosc_tramwaju))  # Update the Label with the integer value
 	melin.get_children()[0].velocity = predkosc_tramwaju
 	var x = 5
-	var zoom = 1.7 - (predkosc_tramwaju+x)/(40+x)
-	zoom = zoom**0.5
+	var zoom = 1.4 - (predkosc_tramwaju+x)/(60+x)
+	zoom = zoom**0.3
 	camera.zoom = Vector2(zoom, zoom)
 	
 func update_score(score) -> void:
