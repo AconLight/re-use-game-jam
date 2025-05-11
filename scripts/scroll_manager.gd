@@ -41,11 +41,12 @@ func _ready() -> void:
 		stop_scroller]
 		
 	background_scroller.load_scroller(path_background, 200, 0.2)
-	background_scroller.width_factor = 0.85
+	background_scroller.width_factor = 0.95
 	back_pavement_scroller.load_scroller(path_pavement, 400, 1)
 	back_pavement_scroller.width_factor = 0.85
 	building_scroller.load_scroller(path_buildings, 58, 1)
 	building_scroller.rnd_factor = 300
+	building_scroller.width_factor = 1.2
 	cars_scroller.load_scroller(path_cars, 95, 1)
 	cars_scroller.width_factor = 4
 	cars_scroller.scl_factor = 0.6
