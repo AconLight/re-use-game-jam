@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://qvg8rvah6i7f" path="res://scenes/slup.tscn" id="2_ybcsy"]
 [ext_resource type="PackedScene" uid="uid://kehkhooj12da" path="res://scenes/pasazerB.tscn" id="3_he4w1"]
 [ext_resource type="PackedScene" uid="uid://d0v75jj60l200" path="res://scenes/pasazerC.tscn" id="4_128m4"]
-[ext_resource type="Texture2D" uid="uid://bfmh0pf2pq8um" path="res://assets/graphics/scroller_cars/drzewa szpaler1.png" id="6_128m4"]
-[ext_resource type="Texture2D" uid="uid://dnwc2njfng583" path="res://assets/graphics/dąb.png" id="7_xgru8"]
+[ext_resource type="Texture2D" uid="uid://veftivpleqev" path="res://assets/graphics/scroller_cars/drzewa szpaler1.png" id="6_128m4"]
+[ext_resource type="Texture2D" uid="uid://dv68fmobyqjjc" path="res://assets/graphics/dąb.png" id="7_xgru8"]
 
 [node name="Przystanek" type="Node2D" node_paths=PackedStringArray("slup")]
 z_index = 2
