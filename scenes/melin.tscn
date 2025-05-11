@@ -24,6 +24,7 @@ script = ExtResource("2_s0w3l")
 
 [node name="Przystanek" parent="." node_paths=PackedStringArray("drzwi_przystanek") instance=ExtResource("5_mxc00")]
 visible = false
+z_index = 0
 position = Vector2(0, -105)
 drzwi_przystanek = NodePath("../Drzwi")
 

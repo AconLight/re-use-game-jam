@@ -6,9 +6,8 @@ extends Node2D
 # Reference to the AnimatedSprite node
 
 func wsiadac():
-	animated_sprite.play("default")  # Replace "default" with the name of
-	# Tween movement to the target position
-	# TODO STEFAN
+	animated_sprite.play("default")  
+	kroki.play()
 	animated_sprite.play()
 	var target_position = przystanek.get_drzwi().global_position
 	var tween := create_tween()

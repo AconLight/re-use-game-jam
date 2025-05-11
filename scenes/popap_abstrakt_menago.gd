@@ -25,7 +25,7 @@ func poka(popapik: int):
 	
 	tween.tween_property(tekst, "modulate:a", 1.0, 0.1) # Fade in
 
-	tween.tween_interval(0.5) # Czekaj, aż tekst będzie widoczny
+	tween.tween_interval(0.8) # Czekaj, aż tekst będzie widoczny
 
 	tween.tween_property(tekst, "modulate:a", 0.0, 2) # Fade out
 
@@ -37,11 +37,11 @@ func _on_feedback_hidden():
 
 			
 func tram_perfect() -> void:
-	tekst.text = "[shake rate=30.0 level=50 connected=1][rainbow freq=0.2 sat=1 val=1 speed=1.0]Perfekcyjnie!"
+	tekst.text = "[shake rate=30.0 level=50 connected=1][color=#ffd500]Perfekcyjnie!"
 	
 func tram_spoko() -> void:
-	tekst.text = "[wave amp=50.0 freq=10 connected=1][rainbow freq=0.2 sat=0.2 val=1 speed=1.0]Solidnie!"
+	tekst.text = "[wave amp=50.0 freq=10 connected=1][color=#04912c]Solidnie!"
 	
 func tram_ok() -> void:
-	tekst.text = "[fade start=3 length=9]Fuszerkaaaaa"
+	tekst.text = "[fade start=7 length=9][color=#a30202]Fuszerkaaaaa"
 	
