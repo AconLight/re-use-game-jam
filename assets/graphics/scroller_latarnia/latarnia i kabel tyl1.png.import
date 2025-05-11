@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bbxmtl0afujlf"
-path="res://.godot/imported/latarnia i kabel tyl1.png-7515f75dff8c591f13b073d2771556e4.ctex"
+path="res://.godot/imported/latarnia i kabel tyl1.png-aba8dc357145816c97a333522a7570bf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/graphics/scroller_cars/latarnia i kabel tyl1.png"
-dest_files=["res://.godot/imported/latarnia i kabel tyl1.png-7515f75dff8c591f13b073d2771556e4.ctex"]
+source_file="res://assets/graphics/scroller_latarnia/latarnia i kabel tyl1.png"
+dest_files=["res://.godot/imported/latarnia i kabel tyl1.png-aba8dc357145816c97a333522a7570bf.ctex"]
 
 [params]
 

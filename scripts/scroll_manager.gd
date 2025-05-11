@@ -3,6 +3,7 @@ var path = "res://assets/graphics/scroller_tiles/"
 var path_background = "res://assets/graphics/scroller_background/"
 var path_buildings = "res://assets/graphics/scroller_buildings/"
 var path_cars = "res://assets/graphics/scroller_cars/"
+var path_latarnia = "res://assets/graphics/scroller_latarnia/"
 var path_cars_cars = "res://assets/graphics/scroller_carscars/"
 var path_pavement = "res://assets/graphics/scroller_pavement/"
 var path_front_pavement = "res://assets/graphics/scroller_front_pavement/"
@@ -17,6 +18,7 @@ var background_scroller
 var building_scroller
 var back_pavement_scroller
 var cars_scroller
+var latarnia_scroller
 var front_pavement_scroller
 var cars_cars_scroller
 
@@ -36,6 +38,7 @@ func _ready() -> void:
 	building_scroller = $Scroller.duplicate()
 	back_pavement_scroller = $Scroller.duplicate()
 	cars_scroller = $Scroller.duplicate()
+	latarnia_scroller = $Scroller.duplicate()
 	cars_cars_scroller = $Scroller.duplicate()
 	front_pavement_scroller = $Scroller.duplicate()
 	stop_scroller = $Scroller.duplicate()
@@ -46,6 +49,7 @@ func _ready() -> void:
 		back_pavement_scroller, 
 		building_scroller, 
 		cars_scroller,
+		latarnia_scroller,
 		cars_cars_scroller,
 		front_pavement_scroller,
 		stop_scroller]
@@ -62,6 +66,11 @@ func _ready() -> void:
 	cars_scroller.width_factor = 4
 	cars_scroller.scl_factor = 0.6
 	cars_scroller.rnd_factor = 200
+	
+	latarnia_scroller.load_scroller(path_latarnia, 20, 1)
+	latarnia_scroller.width_factor = 0.8
+	latarnia_scroller.scl_factor = 0.6
+	latarnia_scroller.rnd_factor = 0
 	
 	cars_cars_scroller.load_scroller(path_cars_cars, 230, 1.4)
 	cars_cars_scroller.scl_factor = 6
