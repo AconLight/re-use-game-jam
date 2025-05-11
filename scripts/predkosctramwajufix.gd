@@ -4,8 +4,12 @@ extends Node
 @export var pociag:Node2D
 @onready var predkosc_tramwaju = 0
 @onready var wynik = 0
-@onready var naklejka_predkosci = $SpeedLabel  # Reference to the Label node
+@onready var naklejka_predkosci = $SpeedLabel
+@onready var intro = $Intro  # Reference to the Label node
 @onready var naklejka_wyniku = $ScoreLabel
+@onready var outro = $Outro # Reference to the Label node
+
+
 
 var gaz_wcisniety = false  # Tracks whether the "gaz" button is pressed
 var hamulec_wcisniety = false  # Tracks whether the "hamulec" button is pressed
@@ -43,6 +47,7 @@ func update_score(score) -> void:
 func _input(event: InputEvent) -> void:
 	# Check if the up-arrow key is pressed or released
 	if event.is_action_pressed("ui_up"):
+		intro.visible = false
 		gaz_wcisniety = true
 		#print("ui_up pressed")
 	elif event.is_action_released("ui_up"):
@@ -56,6 +61,18 @@ func _input(event: InputEvent) -> void:
 	elif event.is_action_released("ui_down"):
 		hamulec_wcisniety = false
 		#print("ui_down released")
+	if Input.is_key_pressed(KEY_I):
+		if wynik > 100:
+			outro.prosze_pokazac_artykul(1)
+		elif wynik > 70:
+			outro.prosze_pokazac_artykul(2)
+		else:
+			outro.prosze_pokazac_artykul(3)
+	if Input.is_key_pressed(KEY_P):
+		outro.visible = false
+		intro.visible = true
+		wynik = 0
+		
 
 func _on_button_pressed() -> void:
 	gaz_wcisniety = true  # Start increasing speed

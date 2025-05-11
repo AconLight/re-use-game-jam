@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://sj2s165pj43"]
+[gd_scene load_steps=10 format=3 uid="uid://sj2s165pj43"]
 
 [ext_resource type="PackedScene" uid="uid://byjgipxlrbee7" path="res://scenes/melin.tscn" id="1_0iy7v"]
 [ext_resource type="Script" uid="uid://c0udluxh7eo6a" path="res://scenes/drzwi.gd" id="1_euqvm"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bk7edejf0r873" path="res://scenes/Prolog.tscn" id="6_0iy7v"]
 [ext_resource type="PackedScene" uid="uid://bu71rdm6avi7w" path="res://scenes/pociag.tscn" id="6_he8bl"]
 [ext_resource type="PackedScene" uid="uid://fbx3dmt4hkir" path="res://scenes/intro.tscn" id="6_r72ry"]
+[ext_resource type="PackedScene" uid="uid://b00rrt5d8bmm3" path="res://scenes/outro.tscn" id="8_2s2ie"]
 [ext_resource type="Script" uid="uid://woj5ve7mqhi7" path="res://scripts/predkosctramwajufix.gd" id="14_wkxhr"]
 
 [node name="EmptyNode" type="Node"]
@@ -45,6 +46,9 @@ offset_bottom = 58.0
 offset_right = 40.0
 offset_bottom = 23.0
 
-[node name="Node2D2" parent="GUI" instance=ExtResource("6_r72ry")]
+[node name="Intro" parent="GUI" instance=ExtResource("6_r72ry")]
+
+[node name="Outro" parent="GUI" instance=ExtResource("8_2s2ie")]
+visible = false
 
 [node name="Control" parent="." instance=ExtResource("6_0iy7v")]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://chb6hsshs8wfg"]
+[gd_scene load_steps=5 format=3 uid="uid://b00rrt5d8bmm3"]
 
 [ext_resource type="Script" uid="uid://cfjyybhdas4qm" path="res://scripts/outro.gd" id="1_vmn6f"]
 [ext_resource type="Texture2D" uid="uid://dcbne2c8v42ws" path="res://assets/graphics/gazeta template.png" id="2_ydlee"]
