@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://bk7edejf0r873"]
+[gd_scene load_steps=8 format=3 uid="uid://bk7edejf0r873"]
 
 [ext_resource type="Texture2D" uid="uid://dt0nqvkmq81t" path="res://assets/graphics/prolog/tramwaj_z_arch.jpg" id="1_lgtnh"]
+[ext_resource type="Script" uid="uid://dciid4s5kfssa" path="res://scenes/prolog_Control.gd" id="1_t75cq"]
 [ext_resource type="FontFile" uid="uid://bhe30qqqnd1r2" path="res://assets/fonts/pixeloid_sans/PixeloidSans.ttf" id="2_f3vxk"]
 [ext_resource type="FontFile" uid="uid://c8n2yveq6dii4" path="res://assets/fonts/pixeloid_sans/PixeloidSans-Bold.ttf" id="3_t75cq"]
 
@@ -31,6 +32,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_t75cq")
 
 [node name="Panel" type="Panel" parent="."]
 modulate = Color(0.332881, 0.332881, 0.332881, 1)
@@ -100,3 +102,5 @@ Zawód motorniczego to nie praca – to dziedzictwo  przekazywane  z pokolenia n
 
 Teraz czas na Ciebie."
 horizontal_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="turn_me_off"]
