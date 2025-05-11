@@ -59,9 +59,10 @@ func _ready() -> void:
 	back_pavement_scroller.load_scroller(path_pavement, 390, 1)
 	back_pavement_scroller.width_factor = 0.85
 	back_pavement_scroller.scl_factor = 1.85
-	building_scroller.load_scroller(path_buildings, 58, 1)
+	building_scroller.load_scroller(path_buildings, -5, 1)
 	building_scroller.rnd_factor = 100
 	building_scroller.width_factor = 1
+	building_scroller.scl_factor = 1.4
 	cars_scroller.load_scroller(path_cars, 95, 1)
 	cars_scroller.width_factor = 4
 	cars_scroller.scl_factor = 0.6
