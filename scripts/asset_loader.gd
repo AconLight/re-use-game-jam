@@ -35,8 +35,9 @@ func load_all(path):
 	var dir = DirAccess.open(path)
 	var files = dir.get_files()
 	for file: String in files:
-		if file.contains(".import"):
-			continue
+		#if file.contains(".import"):
+			#continue
+		file = file.replace('.import', '')
 		var name = file.get_basename()
 		var regex = RegEx.new()
 		regex.compile("^(.*?)(\\d+)$")  # Group 1: text, Group 2: number
