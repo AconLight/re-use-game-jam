@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dji2slbgkgyoi" path="res://assets/graphics/geniusz/obciąg9.png" id="9_8t1uj"]
 [ext_resource type="Texture2D" uid="uid://rlnjn7wfe22g" path="res://assets/graphics/geniusz/obciąg10.png" id="10_51utr"]
 [ext_resource type="PackedScene" uid="uid://bu3ee2ansm46d" path="res://scenes/popap_abstrakt_menago.tscn" id="11_t1ciu"]
-[ext_resource type="Script" path="res://scripts/pociag_animated_sprite_2d.gd" id="12_6og0h"]
+[ext_resource type="Script" uid="uid://dm80p247xosle" path="res://scripts/pociag_animated_sprite_2d.gd" id="12_6og0h"]
 [ext_resource type="AudioStream" uid="uid://bwhkkksngh5he" path="res://assets/audio/fx/jechane_tramwajem.mp3" id="13_gyww5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5htuo"]

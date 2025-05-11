@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://btrwaov0wy1fc"]
+[gd_scene load_steps=7 format=3 uid="uid://btrwaov0wy1fc"]
 
 [ext_resource type="Script" uid="uid://cm5513x4g38tu" path="res://scenes/przystanek.gd" id="1_e4ryh"]
 [ext_resource type="PackedScene" uid="uid://qvg8rvah6i7f" path="res://scenes/slup.tscn" id="2_ybcsy"]
 [ext_resource type="PackedScene" uid="uid://kehkhooj12da" path="res://scenes/pasazerB.tscn" id="3_he4w1"]
 [ext_resource type="PackedScene" uid="uid://d0v75jj60l200" path="res://scenes/pasazerC.tscn" id="4_128m4"]
+[ext_resource type="Texture2D" uid="uid://bfmh0pf2pq8um" path="res://assets/graphics/scroller_cars/drzewa szpaler1.png" id="6_128m4"]
 [ext_resource type="Texture2D" uid="uid://dnwc2njfng583" path="res://assets/graphics/dąb.png" id="7_xgru8"]
 
 [node name="Przystanek" type="Node2D" node_paths=PackedStringArray("slup")]
@@ -42,6 +43,11 @@ z_index = 2
 position = Vector2(-599, 392)
 scale = Vector2(7.335, 7.335)
 texture = ExtResource("7_xgru8")
+
+[node name="DrzewaSzpaler1" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(1541, 391)
+texture = ExtResource("6_128m4")
 
 [connection signal="wsiadac" from="." to="Pasazer3" method="wsiadac"]
 [connection signal="wsiadac" from="." to="Pasazer4" method="wsiadac"]
