@@ -36,15 +36,18 @@ func measure_distance_and_call(przystanek):
 		print("Calling poka with variant 1, +100 points")
 		
 		przystanek.hasCalculated = true
+		przystanek.emit()
 	elif distance <= range_2:
 		popup.poka(2)  # Variant 2 for medium range
 		gui.update_score(70)
 		print("Calling poka with variant 2, +70 points")
 		przystanek.hasCalculated = true
+		przystanek.emit()
 	elif distance <= range_3:
 		popup.poka(3)  # Variant 3 for far range
 		gui.update_score(30)
 		print("Calling poka with variant 3, +30 points")
 		przystanek.hasCalculated = true
+		przystanek.emit()
 	else:
 		print("Target is out of range, +0 points")

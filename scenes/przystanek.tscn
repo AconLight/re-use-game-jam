@@ -37,3 +37,10 @@ przystanek = NodePath("..")
 [node name="Slup" parent="." instance=ExtResource("2_ybcsy")]
 position = Vector2(626, 553)
 scale = Vector2(3, 3)
+
+[connection signal="wsiadac" from="." to="Pasazer" method="wsiadac"]
+[connection signal="wsiadac" from="." to="Pasazer2" method="wsiadac"]
+[connection signal="wsiadac" from="." to="Pasazer3" method="wsiadac"]
+[connection signal="wsiadac" from="." to="Pasazer4" method="wsiadac"]
+[connection signal="wsiadac" from="." to="Pasazer5" method="wsiadac"]
+[connection signal="wsiadac" from="." to="Pasazer6" method="wsiadac"]

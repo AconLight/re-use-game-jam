@@ -5,6 +5,9 @@ extends Node2D
 
 var hasCalculated = false
 
+signal wsiadac  # Define the signal
+func emit():
+	emit_signal("wsiadac") 
 func get_drzwi():
 	return drzwi_przystanek
 

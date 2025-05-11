@@ -17,3 +17,7 @@ func wsiadac():
 		1.0
 		)
 	tween.tween_callback(Callable(self,"queue_free"))
+
+
+func _on_przystanek_wsiadac() -> void:
+	pass # Replace with function body.
