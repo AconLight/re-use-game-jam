@@ -60,8 +60,8 @@ func _ready() -> void:
 	back_pavement_scroller.width_factor = 0.85
 	back_pavement_scroller.scl_factor = 1.85
 	building_scroller.load_scroller(path_buildings, 58, 1)
-	building_scroller.rnd_factor = 300
-	building_scroller.width_factor = 1.2
+	building_scroller.rnd_factor = 100
+	building_scroller.width_factor = 1
 	cars_scroller.load_scroller(path_cars, 95, 1)
 	cars_scroller.width_factor = 4
 	cars_scroller.scl_factor = 0.6
@@ -72,10 +72,11 @@ func _ready() -> void:
 	latarnia_scroller.scl_factor = 0.6
 	latarnia_scroller.rnd_factor = 0
 	
-	cars_cars_scroller.load_scroller(path_cars_cars, 230, 1.4)
+	cars_cars_scroller.load_scroller(path_cars_cars, 230, 1)
 	cars_cars_scroller.scl_factor = 6
 	cars_cars_scroller.width_factor = 3
 	cars_cars_scroller.rnd_factor = 300
+	cars_cars_scroller.prime_velocity = 3
 	
 	front_pavement_scroller.load_scroller(path_front_pavement, 390, 0.4)
 	front_pavement_scroller.width_factor = 0.85
