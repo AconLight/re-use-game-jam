@@ -68,9 +68,9 @@ func _ready() -> void:
 	cars_cars_scroller.width_factor = 3
 	cars_cars_scroller.rnd_factor = 300
 	
-	back_pavement_scroller.load_scroller(path_front_pavement, 390, 1)
-	back_pavement_scroller.width_factor = 0.85
-	back_pavement_scroller.scl_factor = 1.85
+	front_pavement_scroller.load_scroller(path_front_pavement, 390, 0.4)
+	front_pavement_scroller.width_factor = 0.85
+	front_pavement_scroller.scl_factor = 1.85
 	
 	#stop_prefab = get_parent().przystanek
 	var stop_prefab = preload("res://scenes/przystanek.tscn")
